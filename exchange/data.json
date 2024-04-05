@@ -1,5 +1,15 @@
 [
     {
+        "title": "Exchange.Windows.System.PowerShell.DetectResponder",
+        "author": "Jbhoohe",
+        "description": "This artifact allows to detect responder in the environment\nhttps://tcm-sec.com/llmnr-poisoning-and-how-to-prevent-it/\n",
+        "link": "/exchange/artifacts/pages/exchange.windows.system.powershell.detectresponder",
+        "tags": [],
+        "author_link": "https://github.com/Jbhoohe",
+        "author_avatar": "https://avatars.githubusercontent.com/u/3902514?v=4",
+        "date": "2024-04-05"
+    },
+    {
         "title": "Windows.Forensics.Trawler",
         "author": "joeavanzato",
         "description": "Trawler [https://github.com/joeavanzato/Trawler] is a PowerShell script designed to help Incident\nResponders rapidly identify potential adversary persistence mechanisms on Windows.  It is similar\nin nature to PersistenceSniper with additional targeted checks as well as the capability to operate\nagainst a 'dead box' (mounted drive). The output is simplified compared to PersistenceSniper, providing\nthe user with the details needed to kick off an investigation into any identified mechanisms.\nThink of these tools as autoruns on steroids.",
