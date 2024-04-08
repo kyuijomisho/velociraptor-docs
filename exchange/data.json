@@ -1,5 +1,15 @@
 [
     {
+        "title": "Exchange.Windows.EventLogs.Hayabusa.Takajo",
+        "author": "x0rPE",
+        "description": "[Takajo] (https://github.com/Yamato-Security/takajo) is a fast forensics analyzer\nfor Hayabusa results written in Nim. Takaj\u014d means \"Falconer\" in Japanese\nand was chosen as it analyzes Hayabusa's \"catches\" (results).",
+        "link": "/exchange/artifacts/pages/exchange.windows.eventlogs.hayabusa.takajo",
+        "tags": [],
+        "author_link": "https://github.com/x0rPE",
+        "author_avatar": "https://avatars.githubusercontent.com/u/45003021?v=4",
+        "date": "2024-04-08"
+    },
+    {
         "title": "Exchange.Windows.System.PowerShell.DetectResponder",
         "author": "Jbhoohe",
         "description": "This artifact allows to detect responder in the environment\nhttps://tcm-sec.com/llmnr-poisoning-and-how-to-prevent-it/\n",
