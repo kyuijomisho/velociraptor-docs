@@ -1,0 +1,314 @@
+<!doctype html><html lang=en class="js csstransforms3d"><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=generator content="Hugo 0.122.0"><meta name=description content="Velociraptor has a large number of accessors. This page documents the most common ones.
+"><link rel=icon href=/images/favicon.png type=image/png><title>Accessor Reference :: Velociraptor - Digging deeper!</title>
+<link href=/css/nucleus.css?1712942523 rel=stylesheet><link href=/css/fontawesome-all.min.css?1712942523 rel=stylesheet><link href=/css/featherlight.min.css?1712942523 rel=stylesheet><link href=/css/perfect-scrollbar.min.css?1712942523 rel=stylesheet><link href=/css/auto-complete.css?1712942523 rel=stylesheet><link href=/css/theme.css?1712942523 rel=stylesheet><link href=/css/tabs.css?1712942523 rel=stylesheet><link href=/css/hugo-theme.css?1712942523 rel=stylesheet><link href=/css/theme-mine.css?1712942523 rel=stylesheet><link href=/css/dark.css?1712942523 rel=stylesheet><link href=/css/syntax.css?1712942523 rel=stylesheet><link href=/css/light.css?1712942523 rel=stylesheet><link href=/css/hljs.css?1712942523 rel=stylesheet><link href=https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css?1712942523 rel=stylesheet><script src=/js/jquery-3.3.1.min.js?1712942523></script><style>:root #header+#content>#left>#rlblock_left{display:none!important}</style><script async src="https://www.googletagmanager.com/gtag/js?id=G-QYH72LMYCS"></script><script>var doNotTrack=!1;if(!doNotTrack){window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-QYH72LMYCS",{anonymize_ip:!1})}</script><script>var doNotTrack=!1;doNotTrack||(window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","G-QYH72LMYCS","auto"),ga("send","pageview"))</script><script async src=https://www.google-analytics.com/analytics.js></script><script></script></head><body data-url=/docs/forensic/filesystem/accessors/><nav id=sidebar><div id=header-wrapper><div id=header><script>function darkmode(){$("body").addClass("dark").removeClass("light"),document.cookie="theme=darkmode;path=/"}function lightmode(){$("body").removeClass("dark").addClass("light"),document.cookie="theme=lightmode;path=/"}const regex=new RegExp("theme=darkmode");regex.test(document.cookie)?darkmode():lightmode()</script><div class="btn btn-default ThemeSelector darkmode" onclick=darkmode()><i class="fas fa-moon"></i></div><div class="btn btn-default ThemeSelector lightmode" onclick=lightmode()><i class="fas fa-sun"></i></div><a href=https://docs.velociraptor.app/><img src=https://docs.velociraptor.app//images/logo.svg></a></div></div><div class=highlightable><ul class=topics><li data-nav-id=https://docs.velociraptor.app/announcements/ class="dd-item haschildren"><div><i class="fa fa-angle-right fa-sm category-icon"></i>
+<a href=/announcements/><i class="fas fa-bullhorn"></i>Announcements</a></div><ul><li data-nav-id=https://docs.velociraptor.app/announcements/2023-cves/ class=dd-item><div><i class="fa fa-circleXX fa-sm category-icon"></i>
+<a href=/announcements/2023-cves/>Current CVEs</a></div></li></ul></li><li data-nav-id=https://docs.velociraptor.app/docs/ class="dd-item parent haschildren"><div><i class="fa fa-angle-down fa-sm category-icon"></i>
+<a href=/docs/><i class="fas fa-book-reader"></i>Documentation</a></div><ul><li data-nav-id=https://docs.velociraptor.app/docs/overview/ class="dd-item haschildren"><div><i class="fa fa-angle-right fa-sm category-icon"></i>
+<a href=/docs/overview/>Velociraptor Overview</a></div><ul><li data-nav-id=https://docs.velociraptor.app/docs/overview/history/ class=dd-item><div><i class="fa fa-circleXX fa-sm category-icon"></i>
+<a href=/docs/overview/history/>History</a></div></li><li data-nav-id=https://docs.velociraptor.app/docs/overview/support/ class=dd-item><div><i class="fa fa-circleXX fa-sm category-icon"></i>
+<a href=/docs/overview/support/>Support Policy</a></div></li></ul></li><li data-nav-id=https://docs.velociraptor.app/docs/deployment/ class="dd-item haschildren"><div><i class="fa fa-angle-right fa-sm category-icon"></i>
+<a href=/docs/deployment/>Deployment</a></div><ul><li data-nav-id=https://docs.velociraptor.app/docs/deployment/self-signed/ class=dd-item><div><i class="fa fa-circleXX fa-sm category-icon"></i>
+<a href=/docs/deployment/self-signed/>Self-Signed SSL</a></div></li><li data-nav-id=https://docs.velociraptor.app/docs/deployment/cloud/ class="dd-item haschildren"><div><i class="fa fa-angle-right fa-sm category-icon"></i>
+<a href=/docs/deployment/cloud/>Cloud Deployment</a></div><ul><li data-nav-id=https://docs.velociraptor.app/docs/deployment/cloud/multifrontend/ class=dd-item><div><i class="fa fa-circleXX fa-sm category-icon"></i>
+<a href=/docs/deployment/cloud/multifrontend/>Multi-Frontend</a></div></li></ul></li><li data-nav-id=https://docs.velociraptor.app/docs/deployment/orgs/ class=dd-item><div><i class="fa fa-circleXX fa-sm category-icon"></i>
+<a href=/docs/deployment/orgs/>Organizations</a></div></li><li data-nav-id=https://docs.velociraptor.app/docs/deployment/clients/ class=dd-item><div><i class="fa fa-circleXX fa-sm category-icon"></i>
+<a href=/docs/deployment/clients/>Deploying Clients</a></div></li><li data-nav-id=https://docs.velociraptor.app/docs/deployment/security/ class=dd-item><div><i class="fa fa-circleXX fa-sm category-icon"></i>
+<a href=/docs/deployment/security/>Security</a></div></li><li data-nav-id=https://docs.velociraptor.app/docs/deployment/resources/ class=dd-item><div><i class="fa fa-circleXX fa-sm category-icon"></i>
+<a href=/docs/deployment/resources/>Performance</a></div></li><li data-nav-id=https://docs.velociraptor.app/docs/deployment/troubleshooting/ class=dd-item><div><i class="fa fa-circleXX fa-sm category-icon"></i>
+<a href=/docs/deployment/troubleshooting/>Troubleshooting</a></div></li><li data-nav-id=https://docs.velociraptor.app/docs/deployment/references/ class=dd-item><div><i class="fa fa-circleXX fa-sm category-icon"></i>
+<a href=/docs/deployment/references/>Config Reference</a></div></li></ul></li><li data-nav-id=https://docs.velociraptor.app/docs/gui/ class="dd-item haschildren"><div><i class="fa fa-angle-right fa-sm category-icon"></i>
+<a href=/docs/gui/>The Admin GUI</a></div><ul><li data-nav-id=https://docs.velociraptor.app/docs/gui/clients/ class=dd-item><div><i class="fa fa-circleXX fa-sm category-icon"></i>
+<a href=/docs/gui/clients/>Inspecting clients</a></div></li><li data-nav-id=https://docs.velociraptor.app/docs/gui/vfs/ class=dd-item><div><i class="fa fa-circleXX fa-sm category-icon"></i>
+<a href=/docs/gui/vfs/>The VFS</a></div></li><li data-nav-id=https://docs.velociraptor.app/docs/gui/artifacts/ class=dd-item><div><i class="fa fa-circleXX fa-sm category-icon"></i>
+<a href=/docs/gui/artifacts/>Artifacts</a></div></li><li data-nav-id=https://docs.velociraptor.app/docs/gui/hunting/ class=dd-item><div><i class="fa fa-circleXX fa-sm category-icon"></i>
+<a href=/docs/gui/hunting/>Hunting</a></div></li></ul></li><li data-nav-id=https://docs.velociraptor.app/docs/vql/ class="dd-item haschildren"><div><i class="fa fa-angle-right fa-sm category-icon"></i>
+<a href=/docs/vql/>VQL Fundamentals</a></div><ul><li data-nav-id=https://docs.velociraptor.app/docs/vql/notebooks/ class=dd-item><div><i class="fa fa-circleXX fa-sm category-icon"></i>
+<a href=/docs/vql/notebooks/>Notebooks</a></div></li><li data-nav-id=https://docs.velociraptor.app/docs/vql/artifacts/ class=dd-item><div><i class="fa fa-circleXX fa-sm category-icon"></i>
+<a href=/docs/vql/artifacts/>Artifacts</a></div></li><li data-nav-id=https://docs.velociraptor.app/docs/vql/events/ class=dd-item><div><i class="fa fa-circleXX fa-sm category-icon"></i>
+<a href=/docs/vql/events/>Event Queries</a></div></li></ul></li><li data-nav-id=https://docs.velociraptor.app/docs/forensic/ class="dd-item parent haschildren"><div><i class="fa fa-angle-down fa-sm category-icon"></i>
+<a href=/docs/forensic/>Forensic Analysis</a></div><ul><li data-nav-id=https://docs.velociraptor.app/docs/forensic/filesystem/ class="dd-item parent haschildren"><div><i class="fa fa-angle-down fa-sm category-icon"></i>
+<a href=/docs/forensic/filesystem/>Searching Filenames</a></div><ul><li data-nav-id=https://docs.velociraptor.app/docs/forensic/filesystem/paths/ class=dd-item><div><i class="fa fa-circleXX fa-sm category-icon"></i>
+<a href=/docs/forensic/filesystem/paths/>Velociraptor Paths</a></div></li><li data-nav-id=https://docs.velociraptor.app/docs/forensic/filesystem/accessors/ class="dd-item active"><div><i class="fa fa-circleXX fa-sm category-icon"></i>
+<a href=/docs/forensic/filesystem/accessors/>Accessor Reference</a></div></li><li data-nav-id=https://docs.velociraptor.app/docs/forensic/filesystem/remapping/ class=dd-item><div><i class="fa fa-circleXX fa-sm category-icon"></i>
+<a href=/docs/forensic/filesystem/remapping/>Remapping Accessors</a></div></li></ul></li><li data-nav-id=https://docs.velociraptor.app/docs/forensic/searching/ class=dd-item><div><i class="fa fa-circleXX fa-sm category-icon"></i>
+<a href=/docs/forensic/searching/>Searching Content</a></div></li><li data-nav-id=https://docs.velociraptor.app/docs/forensic/ntfs/ class=dd-item><div><i class="fa fa-circleXX fa-sm category-icon"></i>
+<a href=/docs/forensic/ntfs/>NTFS Analysis</a></div></li><li data-nav-id=https://docs.velociraptor.app/docs/forensic/binary/ class=dd-item><div><i class="fa fa-circleXX fa-sm category-icon"></i>
+<a href=/docs/forensic/binary/>Binary parsing</a></div></li><li data-nav-id=https://docs.velociraptor.app/docs/forensic/evidence_of_execution/ class=dd-item><div><i class="fa fa-circleXX fa-sm category-icon"></i>
+<a href=/docs/forensic/evidence_of_execution/>Evidence Of Execution</a></div></li><li data-nav-id=https://docs.velociraptor.app/docs/forensic/event_logs/ class=dd-item><div><i class="fa fa-circleXX fa-sm category-icon"></i>
+<a href=/docs/forensic/event_logs/>Event Logs</a></div></li><li data-nav-id=https://docs.velociraptor.app/docs/forensic/volatile/ class=dd-item><div><i class="fa fa-circleXX fa-sm category-icon"></i>
+<a href=/docs/forensic/volatile/>Volatile State</a></div></li></ul></li><li data-nav-id=https://docs.velociraptor.app/docs/offline_triage/ class="dd-item haschildren"><div><i class="fa fa-angle-right fa-sm category-icon"></i>
+<a href=/docs/offline_triage/>Triage and acquisition</a></div><ul><li data-nav-id=https://docs.velociraptor.app/docs/offline_triage/remote_uploads/ class=dd-item><div><i class="fa fa-circleXX fa-sm category-icon"></i>
+<a href=/docs/offline_triage/remote_uploads/>Remote Uploads</a></div></li></ul></li><li data-nav-id=https://docs.velociraptor.app/docs/client_monitoring/ class=dd-item><div><i class="fa fa-circleXX fa-sm category-icon"></i>
+<a href=/docs/client_monitoring/>Client Monitoring</a></div></li><li data-nav-id=https://docs.velociraptor.app/docs/extending_vql/ class=dd-item><div><i class="fa fa-circleXX fa-sm category-icon"></i>
+<a href=/docs/extending_vql/>Extending VQL</a></div></li><li data-nav-id=https://docs.velociraptor.app/docs/server_automation/ class="dd-item haschildren"><div><i class="fa fa-angle-right fa-sm category-icon"></i>
+<a href=/docs/server_automation/>Server Automation</a></div><ul><li data-nav-id=https://docs.velociraptor.app/docs/server_automation/server_api/ class=dd-item><div><i class="fa fa-circleXX fa-sm category-icon"></i>
+<a href=/docs/server_automation/server_api/>Server API</a></div></li><li data-nav-id=https://docs.velociraptor.app/docs/server_automation/server_monitoring/ class=dd-item><div><i class="fa fa-circleXX fa-sm category-icon"></i>
+<a href=/docs/server_automation/server_monitoring/>Server Monitoring</a></div></li></ul></li></ul></li><hr><li data-nav-id=https://docs.velociraptor.app/vql_reference/ class="dd-item haschildren"><div><i class="fa fa-angle-right fa-sm category-icon"></i>
+<a href=/vql_reference/><i class="fas fa-book"></i>VQL Reference</a></div><ul><li data-nav-id=https://docs.velociraptor.app/vql_reference/basic/ class="dd-item haschildren"><div><i class="fa fa-circleXX fa-sm category-icon"></i>
+<a href=/vql_reference/basic/>Basic VQL</a></div></li><li data-nav-id=https://docs.velociraptor.app/vql_reference/linux/ class="dd-item haschildren"><div><i class="fa fa-circleXX fa-sm category-icon"></i>
+<a href=/vql_reference/linux/>Linux Specific</a></div></li><li data-nav-id=https://docs.velociraptor.app/vql_reference/windows/ class="dd-item haschildren"><div><i class="fa fa-circleXX fa-sm category-icon"></i>
+<a href=/vql_reference/windows/>Windows Specific</a></div></li><li data-nav-id=https://docs.velociraptor.app/vql_reference/parsers/ class="dd-item haschildren"><div><i class="fa fa-circleXX fa-sm category-icon"></i>
+<a href=/vql_reference/parsers/>Parsers</a></div></li><li data-nav-id=https://docs.velociraptor.app/vql_reference/server/ class="dd-item haschildren"><div><i class="fa fa-circleXX fa-sm category-icon"></i>
+<a href=/vql_reference/server/>Server Side</a></div></li><li data-nav-id=https://docs.velociraptor.app/vql_reference/plugin/ class="dd-item haschildren"><div><i class="fa fa-circleXX fa-sm category-icon"></i>
+<a href=/vql_reference/plugin/>Client Side</a></div></li><li data-nav-id=https://docs.velociraptor.app/vql_reference/event/ class="dd-item haschildren"><div><i class="fa fa-circleXX fa-sm category-icon"></i>
+<a href=/vql_reference/event/>Event Plugins</a></div></li><li data-nav-id=https://docs.velociraptor.app/vql_reference/experimental/ class="dd-item haschildren"><div><i class="fa fa-circleXX fa-sm category-icon"></i>
+<a href=/vql_reference/experimental/>Experimental</a></div></li><li data-nav-id=https://docs.velociraptor.app/vql_reference/misc/ class="dd-item haschildren"><div><i class="fa fa-circleXX fa-sm category-icon"></i>
+<a href=/vql_reference/misc/>Misc</a></div></li></ul></li><li data-nav-id=https://docs.velociraptor.app/training/ class=dd-item><div><i class="fa fa-circleXX fa-sm category-icon"></i>
+<a href=/training/><i class="fas fa-graduation-cap"></i>Training</a></div></li><li data-nav-id=https://docs.velociraptor.app/blog/ class="dd-item haschildren"><div><i class="fa fa-circleXX fa-sm category-icon"></i>
+<a href=/blog/><i class="fas fa-newspaper"></i>Blog</a></div></li><li data-nav-id=https://docs.velociraptor.app/presentations/ class="dd-item haschildren"><div><i class="fa fa-angle-right fa-sm category-icon"></i>
+<a href=/presentations/><i class="fas fa-chalkboard-teacher"></i>Presentations</a></div><ul><li data-nav-id=https://docs.velociraptor.app/presentations/2022_linuxconf_au/ class=dd-item><div><i class="fa fa-circleXX fa-sm category-icon"></i>
+<a href=/presentations/2022_linuxconf_au/>Linux Conf Au 2022</a></div></li><li data-nav-id=https://docs.velociraptor.app/presentations/2022_auscert/ class=dd-item><div><i class="fa fa-circleXX fa-sm category-icon"></i>
+<a href=/presentations/2022_auscert/>Auscert 2022</a></div></li><li data-nav-id=https://docs.velociraptor.app/presentations/2022_dfrws_us/ class=dd-item><div><i class="fa fa-circleXX fa-sm category-icon"></i>
+<a href=/presentations/2022_dfrws_us/>DFRWS US 2022</a></div></li><li data-nav-id=https://docs.velociraptor.app/presentations/2022_tech_user_group_cbr/ class=dd-item><div><i class="fa fa-circleXX fa-sm category-icon"></i>
+<a href=/presentations/2022_tech_user_group_cbr/>Tech Users Group 2022</a></div></li><li data-nav-id=https://docs.velociraptor.app/presentations/2022_sans_summit/ class=dd-item><div><i class="fa fa-circleXX fa-sm category-icon"></i>
+<a href=/presentations/2022_sans_summit/>SANS Summit 2022</a></div></li><li data-nav-id=https://docs.velociraptor.app/presentations/2022_velocon/ class=dd-item><div><i class="fa fa-circleXX fa-sm category-icon"></i>
+<a href=/presentations/2022_velocon/>Velocon 2022</a></div></li><li data-nav-id=https://docs.velociraptor.app/presentations/2022_dfrws_apac/ class=dd-item><div><i class="fa fa-circleXX fa-sm category-icon"></i>
+<a href=/presentations/2022_dfrws_apac/>DFRWS APAC 2022</a></div></li><li data-nav-id=https://docs.velociraptor.app/presentations/2023_everything_open/ class=dd-item><div><i class="fa fa-circleXX fa-sm category-icon"></i>
+<a href=/presentations/2023_everything_open/>EverythingOpen 2023</a></div></li><li data-nav-id=https://docs.velociraptor.app/presentations/2023_auscert/ class=dd-item><div><i class="fa fa-circleXX fa-sm category-icon"></i>
+<a href=/presentations/2023_auscert/>Auscert 2023</a></div></li><li data-nav-id=https://docs.velociraptor.app/presentations/2023_velocon/ class=dd-item><div><i class="fa fa-circleXX fa-sm category-icon"></i>
+<a href=/presentations/2023_velocon/>VeloCON 2023</a></div></li></ul></li><li data-nav-id=https://docs.velociraptor.app/exchange/ class="dd-item haschildren"><div><i class="fa fa-circleXX fa-sm category-icon"></i>
+<a href=/exchange/><i class="fas fa-code"></i>Artifact Exchange</a></div></li><li data-nav-id=https://docs.velociraptor.app/artifact_references/ class="dd-item haschildren"><div><i class="fa fa-circleXX fa-sm category-icon"></i>
+<a href=/artifact_references/><i class="fas fa-book"></i>Artifact Reference</a></div></li><li data-nav-id=https://docs.velociraptor.app/knowledge_base/ class="dd-item haschildren"><div><i class="fa fa-circleXX fa-sm category-icon"></i>
+<a href=/knowledge_base/><i class="fas fa-brain"></i>Knowledge Base</a></div></li><li data-nav-id=https://docs.velociraptor.app/search/ class=dd-item><div><i class="fa fa-circleXX fa-sm category-icon"></i>
+<a href=/search/><i class='fas fa-search'></i>Search</a></div></li></ul><hr><section id=shortcuts><h3></h3><ul><li><a class=padding href=https://github.com/Velocidex/velociraptor><i class='fab fa-github'></i>Github</a></li><li><a class=padding href=https://docs.velociraptor.app/discord/><i class='fab fa-discord'></i>Discord</a></li><li><a class=padding href=mailto:velociraptor-discuss@googlegroups.com><i class='fas fa-envelope'></i>Mailing List</a></li><li><a class=padding href=https://docs.velociraptor.app/rss/><i class='fas fa-rss'></i>RSS</a></li><li><a class=padding href=https://docs.rapid7.com/><i class='fa fa-question-circle'></i>Rapid7 Docs</a></li></ul></section><section id=footer><div class=footer-copyright>Brought to you by
+<img src=/images/Rapid7_logo.svg class=rapid7><br><i class="fas fa-copyright"></i> 2022</div></section></div></nav><script>$("#sidebar i.fa-angle-right").each(function(){$(this).parent().parent().find("ul").hide()})</script><section id=body><div id=overlay></div><div class="padding highlightable"><div><div id=top-bar><div id=top-github-link><a class=github-link title='Edit this page' href=https://github.com/Velocidex/velociraptor-docs/edit/master/content/docs/forensic/filesystem/accessors/_index.md target=blank><i class="fas fa-code-branch"></i>
+<span id=top-github-link-text>Edit this page</span></a></div><div id=breadcrumbs itemscope itemtype=http://data-vocabulary.org/Breadcrumb><span id=sidebar-toggle-span><a href=# id=sidebar-toggle data-sidebar-toggle><i class="fas fa-bars"></i>
+</a></span><span id=toc-menu><i class="fas fa-list-alt"></i></span>
+<span class=links>Accessor Reference</span></div><div class=progress><div class=wrapper><nav id=TableOfContents><ul><li><a href=#auto>auto</a></li><li><a href=#bzip2>bzip2</a></li><li><a href=#collector>collector</a></li><li><a href=#collector_sparse>collector_sparse</a></li><li><a href=#data>data</a></li><li><a href=#ewf>ewf</a></li><li><a href=#fat>fat</a><ul><li><a href=#example>Example</a></li></ul></li><li><a href=#file>file</a></li><li><a href=#file_links>file_links</a></li><li><a href=#file_nocase>file_nocase</a></li><li><a href=#gzip>gzip</a></li><li><a href=#lazy_ntfs>lazy_ntfs</a></li><li><a href=#me>me</a></li><li><a href=#mft>mft</a></li><li><a href=#ntfs>ntfs</a></li><li><a href=#ntfs_vss>ntfs_vss</a></li><li><a href=#offset>offset</a></li><li><a href=#pipe>pipe</a></li><li><a href=#process>process</a></li><li><a href=#raw_file>raw_file</a></li><li><a href=#raw_ntfs>raw_ntfs</a></li><li><a href=#raw_reg>raw_reg</a></li><li><a href=#s3>s3</a></li><li><a href=#scope>scope</a></li><li><a href=#smb>smb</a></li><li><a href=#sparse>sparse</a></li><li><a href=#ssh>ssh</a></li><li><a href=#vfs>vfs</a></li><li><a href=#zip>zip</a></li></ul></nav></div></div></div></div><div id=head-tags></div><div id=body-inner><h1>Accessor Reference</h1><h2 id=auto>auto</h2><p>The <code>auto</code> accessor is the default accessor that is used when a VQL
+query does not specify an <code>accessor</code> parameter.</p><p>On Windows it attempts to open the file using the <code>file</code> accessor and
+if that fails (for example due to permission errors), the <code>auto</code>
+accessor automatically tries the <code>ntfs</code> accessor to access the file
+using raw level filesystem parsing.</p><p>The overall effect is that the Velociraptor is able to transparently
+access files that are locked (for example registry hives) or are
+protected by filter drivers (e.g. some endpoint security software). In
+general you should use the <code>auto</code> accessor to open files on the local
+filesystem in all cases since it will be much faster than using the
+<code>ntfs</code> accessor for every file (most files are not actually locked).</p><p>On other operating systems, the <code>auto</code> accessor is an alias to the
+<code>file</code> accessor.</p><h2 id=bzip2>bzip2</h2><p>The bzip2 accessor is able to read the content of <code>bz2</code> compressed
+files. It is very similar to the <code>gzip</code> accessor.</p><p>Since <code>bzip2</code> compressed files do not have an actual file hierarchy,
+they can not be directly searched with <code>glob()</code>. This accessor is
+therefore only really useful for opening the file for reading - or for
+chaining with another accessor.</p><pre><code class=language-sql>SELECT read_file(accessor=&quot;bzip2&quot;, filename=&quot;F:/hello.txt.bz2&quot;, length=10)
+FROM scope()
+</code></pre><p>Performance: Bzip2 files are non-seekable. This means they must be
+read in sequence from start to finish. If the VQL query attempts to
+seek within the file, this accessor will automatically decompress the
+entire file into a temporary file so it can seek within it. This means
+that performance can be extremely bad in some cases.</p><h2 id=collector>collector</h2><p>Open an offline collector zip file as if it was a directory. This is
+similar to the <code>zip</code> accessor (see below) but it automatically
+decrypts collections protected using the x509 scheme. Use this accessor to transparently read inside encrypted collections.</p><p>This accessor also automatically expands sparse files by zero padding
+them (when possible - if zero padding is unreasonable large for this
+file, we do not expand it).</p><h2 id=collector_sparse>collector_sparse</h2><p>Same as the <code>collector</code> accessor but does not expand sparse files.</p><h2 id=data>data</h2><p>Makes a string appears as an in memory file. Path is taken as a
+literal string to use as the file&rsquo;s data.</p><p>This accessor is useful to allow plugins that normally accept files to
+also accept a plain string (for example <code>parse_binary()</code>).</p><h2 id=ewf>ewf</h2><p>Allow reading an <code>EWF</code> file.</p><p>Note that usually <code>EWF</code> files form a set of files with extensions like
+<code>.E01</code>, <code>.E02</code> etc. This accessor will automatically try to find all
+parts of the same volume set if the file name ends with a <code>.E01</code>.</p><p>For Example</p><pre><code class=language-vql>SELECT * FROM glob(
+  globs=&quot;*&quot;, accessor=&quot;raw_ntfs&quot;, root=pathspec(
+    Path=&quot;/&quot;,
+    DelegateAccessor=&quot;ewf&quot;,
+    DelegatePath=&quot;C:/test.ntfs.dd.E01&quot;))
+</code></pre><p>The next example reads a FAT partition through the offset
+accessor (32256 is the byte offset of the first FAT partition).</p><pre><code>SELECT OSPath.Path AS OSPath, Size, Mode.String
+FROM glob(
+  globs=&quot;*&quot;, accessor=&quot;fat&quot;,
+  root=pathspec(
+    Path=&quot;/&quot;,
+    DelegateAccessor=&quot;offset&quot;,
+    DelegatePath=pathspec(
+      Path=&quot;/32256&quot;,
+      DelegateAccessor=&quot;ewf&quot;,
+      DelegatePath=&quot;/tmp/ubnist1.gen3.E01&quot;)))
+</code></pre><h2 id=fat>fat</h2><p>Access the FAT filesystem inside an image by parsing FAT.</p><p>This accessor is designed to operate on images directly. It requires a
+delegate accessor to get the raw image and will open files using the
+FAT full path rooted at the top of the filesystem.</p><h3 id=example>Example</h3><p>The following query will glob all the files under the directory <code>a</code>
+inside a FAT image file</p><pre><code class=language-sql>SELECT *
+FROM glob(globs='/**',
+  accessor=&quot;fat&quot;,
+  root=pathspec(
+    Path=&quot;a&quot;,
+    DelegateAccessor=&quot;file&quot;,
+    DelegatePath='fat.dd'))
+</code></pre><h2 id=file>file</h2><p>Access the filesystem using the OS API.</p><p>NOTE: This accessor does not follow symbolic links on <code>Windows</code> or
+<code>Linux</code> in order to avoid being trapped by cycles. This means that on
+some Linux systems you will find <code>/usr/bin/ls</code> instead of <code>/bin/ls</code>
+since <code>/bin</code> is a symlink to <code>/usr/bin/</code></p><h2 id=file_links>file_links</h2><p>Access the filesystem using the OS APIs.</p><p>This Accessor also follows any symlinks</p><p>Note: Take care with this accessor because there may be circular
+links. In particular this is dangerous on Linux when accidentally
+entering the <code>/proc</code> part of the filesystem because it contains
+circular links to everywhere.</p><h2 id=file_nocase>file_nocase</h2><p>Access the filesystem using the OS API.</p><p>On Linux this accessor implements case insensitive comparisons over
+the usual case sensitive filesystem. This is important for cases where
+Windows files are unpacked on a Linux system and you are trying to use
+artifacts written for Windows - they may fail due to incorrect casing
+making it impossible to find the right files.</p><h2 id=gzip>gzip</h2><p>Access the content of gzip files. The filename is a pathspec with a
+delegate accessor opening the actual gzip file.</p><p>Since <code>gzip</code> compressed files do not have an actual file hierarchy,
+they can not be directly searched with <code>glob()</code>. This accessor is
+therefore only really useful for opening the file for reading - or for
+chaining with another accessor.</p><pre><code class=language-sql>SELECT read_file(accessor=&quot;gzip&quot;, filename=&quot;F:/hello.txt.gz&quot;, length=10)
+FROM scope()
+</code></pre><p>Performance: <code>GZIP</code> files are non-seekable. This means they must be
+read in sequence from start to finish. If the VQL query attempts to
+seek within the file, this accessor will automatically decompress the
+entire file into a temporary file so it can seek within it. This means
+that performance can be extremely bad in some cases.</p><h2 id=lazy_ntfs>lazy_ntfs</h2><p>Access the NTFS filesystem by parsing NTFS structures.</p><p>This accessor is a variation of the <code>ntfs</code> accessor. It is a bit
+faster because it does not enumerate all the attributes in files
+contained in directories, instead relying only on the <code>I30</code> index
+streams. This means it is unable to find Alternate Data Streams in
+directories (because ADS are not stored in the I30 stream).</p><p>Usually the extra performance is not worth these limitations since the
+<code>ntfs</code> accessor is pretty fast these days already.</p><h2 id=me>me</h2><p>The <code>me</code> accessor is used to retrieve files packed inside the
+Velociraptor binary (for example in the offline collector). Currently
+this is similar to the zip accessor but it might change in future. Do
+not use this accessor directly, instead use the supported
+<code>Generic.Utils.FetchBinary</code> artifact to retrieve packed files.</p><h2 id=mft>mft</h2><p>The <code>mft</code> accessor is used to access arbitrary MFT streams as files.</p><p>The filename is taken as an MFT inode number in the form
+<code>&lt;entry_id>-&lt;stream_type>-&lt;id></code>, e.g. <code>203-128-0</code>. The first component
+of the file is the device number to open (e.g. <code>C:</code>)</p><p>This accessor does not support directories and so can not be used in
+<code>glob()</code></p><p>An example of using this artifact:</p><pre><code>SELECT upload(accessor=&quot;mft&quot;, filename=&quot;C:/203-128-0&quot;)
+FROM scope()
+</code></pre><h2 id=ntfs>ntfs</h2><p>Access the NTFS filesystem by parsing NTFS structures.</p><p>This accessor uses an NTFS parser to present the content of the NTFS
+filesystem as a simple filesystem. It emulates the regular <code>file</code>
+accessor and its interpretation of the paths:</p><ol><li><p>At the top level of the filesystem, this accessor enumerates all
+fixed drives and VSS devices to present a list of valid devices
+that may be parsed. For example</p><ul><li><code>\\.\C:</code> - The C drive device</li><li><code>\\\?\GLOBALROOT\Device\HarddiskVolumeShadowCopy1</code> - The first VSS device.</li></ul></li><li><p>The accessor will automatically convert from Windows paths to ntfs
+paths. For example the path <code>C:/Windows</code> will be converted to
+<code>\\.\C:\Windows</code></p></li></ol><p>This accessor is only available on Windows.</p><p>See the <code>raw_ntfs</code> accessor for more information and comparisons.</p><h2 id=ntfs_vss>ntfs_vss</h2><p>Access the NTFS filesystem by considering all VSS.</p><p>This accessor considers all Volume Shadow Copies available on the
+system to deduplicate all files which are identical across all
+VSS. Only files that have been modified are shown.</p><p>This makes it easier to compare files across VSS copies. If the file
+is the same across all VSS then the accessor prefers to show the one
+of the main device (i.e. <code>\\.\C:</code>)</p><h2 id=offset>offset</h2><p>Allow reading another file from a specific offset. The filename is
+taken as an offset into the delegate.</p><p>For Example</p><pre><code class=language-sql>SELECT read_file(accessor=&quot;offset&quot;, filename=pathspec(
+    DelegateAccessor=&quot;data&quot;,
+    DelegatePath=&quot;Hello world&quot;,
+    Path=&quot;/6&quot;))
+FROM scope()
+
+-&gt; &quot;world&quot;
+</code></pre><p>This accessor is useful in cases where we need to rebase the zero
+offset into the file. For example when reading a filesystem partition
+from an image.</p><h2 id=pipe>pipe</h2><p>Read from a VQL pipe.</p><p><strong>NOTE: this is not the same as a windows named pipe</strong>.</p><p>A VQL pipe allows data to be generated from a VQL query, as the pipe
+is read, the query proceeds to feed more data to it.</p><p>Example:</p><pre><code class=language-sql>LET MyPipe = pipe(query={
+    SELECT _value FROM range(start=0, end=10, step=1)
+}, sep=&quot;\n&quot;)
+
+SELECT read_file(filename=&quot;MyPipe&quot;, accessor=&quot;pipe&quot;)
+FROM scope()
+</code></pre><p>It is mostly useful for redirecting the output of one query to another
+without using temp files. You probably do not want to use it!</p><h2 id=process>process</h2><p>Access process memory like a file.</p><p>The Path is taken in the form <code>/&lt;pid></code>, i.e. the pid appears as the
+top level path component.</p><p>The accessor does not support directories so it can not be used with
+the <code>glob()</code> plugin. It is useful for any functions or plugins that
+need to read from process memory.</p><p>Note that process memory is typically very sparse (on 64 bit systems
+it covers the entire address space). Therefore, Velociraptor will
+treat it as sparse - various plugins that support sparse files (such
+as the <code>upload()</code> plugin or <code>yara()</code> plugin) will automatically handle
+the unmapped regions.</p><p>You will therefore need other plugins like <code>vad()</code> to figure out the
+exact process memory layout where there is data to read. It is not an
+error to read from unmapped regions, but it will just return nulls.</p><h2 id=raw_file>raw_file</h2><p>Access the filesystem using the OS API.</p><p>This accessor allows to read raw devices. On Windows, raw files need
+to be read in aligned page size. This accessor ensures reads are
+buffered into page size buffers to make it safe for VQL to read the
+device in arbitrary alignment.</p><p>We do not support directory operations on raw devices, so this
+accessor can not be used in the <code>glob()</code> plugin.</p><p>Additionally this accessor does not attempt to interpret the device
+part of the path components. It will pass the full path string to the
+underlying OS APIs. This allows us to read arbitrary devices.</p><h2 id=raw_ntfs>raw_ntfs</h2><p>Access the NTFS filesystem inside an image by parsing NTFS.</p><p>This accessor is designed to operate on images directly. It requires a
+delegate accessor to get the raw image and will open files using the
+NTFS full path rooted at the top of the filesystem.</p><p>Example:</p><p>The following query will open the $MFT file from the raw image file
+that will be accessed using the file accessor.</p><pre><code class=language-vql>SELECT * FROM parse_mft(
+  filename=pathspec(
+    Path=&quot;$MFT&quot;,
+    DelegateAccessor=&quot;file&quot;,
+    DelegatePath='ntfs.dd'),
+  accessor=&quot;raw_ntfs&quot;)
+</code></pre><p>Note that this accessor is different than the standard <code>ntfs</code> accessor
+which attempts to emulate the simpler <code>file</code> accessor. This is so the
+paths can be easily interchanged between <code>file</code> and <code>ntfs</code>.</p><p>The <code>ntfs</code> accessor automatically calculates the raw device needed to
+open the ntfs partition. The following queries are equivalent:</p><pre><code>SELECT * FROM parse_mft(
+  filename=pathspec(
+    Path=&quot;$MFT&quot;,
+    DelegateAccessor=&quot;raw_file&quot;,
+    DelegatePath='''\\.\C:'''),
+  accessor=&quot;raw_ntfs&quot;)
+
+SELECT * FROM parse_mft(
+  filename='''\\.\C:\$MFT''',
+  accessor=&quot;ntfs&quot;)
+</code></pre><p>The <code>raw_ntfs</code> accessor is available in all supported platforms and
+uses the same filesystem parser as the <code>ntfs</code> accessor.</p><h2 id=raw_reg>raw_reg</h2><p>Access keys and values by parsing a raw registry hive. Path is a
+OSPath having delegate opening the raw registry hive.</p><p>For example we can search the raw registry for the System hive:</p><pre><code class=language-sql>SELECT OSPath
+FROM glob(globs='*',
+  accessor=&quot;raw_reg&quot;,
+  root=pathspec(
+    Path=&quot;ControlSet001&quot;,
+    DelegateAccessor=&quot;auto&quot;,
+    DelegatePath=&quot;C:/Windows/System32/config/System&quot;))
+</code></pre><h2 id=s3>s3</h2><p>Access S3 Buckets.</p><p>This artifact allows access to S3 buckets:</p><ol><li><p>The first component is interpreted as the bucket name.</p></li><li><p>Provide credentials through the VQL environment
+variable S3_CREDENTIALS. This should be a dict with
+a key of the bucket name and the value being the credentials.</p></li></ol><p>Example:</p><pre><code class=language-sql>LET S3_CREDENTIALS &lt;= dict(
+    endpoint='http://127.0.0.1:4566/',
+    credentials_key='admin',
+    credentials_secret='password',
+    no_verify_cert=1)
+
+SELECT *, read_file(filename=OSPath, length=10, accessor='s3') AS Data
+FROM glob(globs='/velociraptor/*', accessor='s3')
+</code></pre><p>NOTE: It is more convenient to use the <a href=/blog/2024/2024-03-10-release-notes-0.72/#secret-management>secrets support</a> in
+0.72 to manage these credentials.</p><h2 id=scope>scope</h2><p>Similar to the <code>data</code> accessor, this makes a string appears as the
+file contents. However, instead of the filename itself containing the
+file content, the filename refers to the name of a variable in the
+current scope that contains the data.</p><p>This is useful when the binary data is not unicode safe and can not be
+properly represented by JSON. Sometimes the filename is echoed in
+various log messages and with the <code>data</code> accessor this will echo some
+binary data into the logs.</p><p>Example</p><pre><code class=language-sql>LET MyData &lt;= &quot;This is a test string&quot;
+
+SELECT read_file(accessor=&quot;scope&quot;, filename=&quot;MyData&quot;) FROM scope()
+</code></pre><h2 id=smb>smb</h2><p>Access windows shares.</p><p>This accessor is similar to the <code>s3</code> accessor in allowing access to
+remove network shares. The credentials are passed in a scope variable
+called <code>SMB_CREDENTIALS</code>. The credentials are a dict with the server
+name being the key and the username and password joined with &ldquo;:&rdquo;.</p><p>The first element in the path is treated as the server name (top level
+directory). The accessor then looks up the relevant credentials from
+the <code>SMB_CREDENTIALS</code> dict. This allows multiple servers and multiple
+credentials to be defined at the same time.</p><p>Example:</p><pre><code>LET SMB_CREDENTIALS &lt;= dict(ServerName=&quot;Username:Password&quot;)
+
+SELECT OSPath,
+FROM glob(globs='*',
+          root=&quot;/ServerName/Windows/System32&quot;,
+          accessor=&quot;smb&quot;)
+</code></pre><h2 id=sparse>sparse</h2><p>Allow reading another file by overlaying a sparse map on top of it.</p><p>The map excludes reading from certain areas which are considered
+sparse.</p><p>The resulting file is sparse (and therefore uploading it excludes the
+masked out regions). The filename is taken as a list of ranges.</p><p>For example here we create a sparse file over the delegate which only
+defines the first 5 bytes, then a 5 byte sparse region then another 5
+bytes.</p><pre><code class=language-sql>SELECT upload(accessor=&quot;sparse&quot;, path=pathspec(
+    DelegateAccessor=&quot;data&quot;, DelegatePath=MyData,
+    Path=[dict(Offset=0,Length=5), dict(Offset=10,Length=5)])
+FROM scope()
+</code></pre><p>The uploaded file will contain only 10 bytes but will retain the 5
+byte &ldquo;hole&rdquo; in the middle.</p><p>This accessor is most useful when uploading or masking parts of other
+files - for example uploading a carved files from a larger image. NOTE
+that delegate offsets are retained in this accessor (so for example
+offset 10 in this accessor corresponds to offset 10 in the delegate
+regardless of the sparse map).</p><p>For more flexibility than this use the &ldquo;ranged&rdquo; accessor.</p><h2 id=ssh>ssh</h2><p>Access a remote system&rsquo;s filesystem via <code>SSH/SFTP</code>.</p><p>This accessor allows accessing remote systems via <code>SFTP/SSH</code>. This is
+useful for being able to search remote systems where it is not
+possible to run a Velociraptor client directly on the endpoint. For
+example, on embedded edge devices such as routers/firewalls/VPN
+servers etc.</p><p>To use this accessor you will need to provide credentials via the
+SSH_CONFIG scope variable:</p><pre><code class=language-vql>LET SSH_CONFIG &lt;= dict(hostname='localhost:22',
+    username='mic',
+    private_key=read_file(filename='/home/mic/.ssh/id_rsa'))
+
+SELECT OSPath FROM glob(accessor=&quot;ssh&quot;, globs=&quot;/*&quot;)
+</code></pre><p>NOTES:</p><ol><li>hostname must have a port after the column.</li><li>You can provide a password instead of a private key via the
+password parameter to the <code>SSH_CONFIG</code></li><li>The private_key parameter must contain an unencrypted PEM encoded
+SSH private key pair.</li></ol><p>NOTE: It is more convenient to use the <a href=/blog/2024/2024-03-10-release-notes-0.72/#secret-management>secrets support</a> in
+0.72 to manage these credentials.</p><h2 id=vfs>vfs</h2><p>Access client&rsquo;s VFS filesystem on the server.</p><p>On the Velociraptor server, the Virtual File System (VFS) represents a
+cached copy of the files and directories we have collected from the
+client using the <code>VFS</code> GUI.</p><p>Since it is a snapshot formed over multiple collections from the GUI
+it may change in future (for example if a file is added or removed,
+the next time the directory is refreshed the VFS view will change).</p><p>Due to the interactive nature of the VFS collections, the VFS is
+constructed over many collections in different times.</p><p>Sometimes we want to directly read those cached files and directories
+and this is where the <code>vfs</code> accessor comes in.</p><p>The accessor gets the client&rsquo;s ID from the <code>ClientId</code> scope
+variable. The first component of the path is taken to be the accessor
+(top level of the VFS GUI).</p><p>This accessor is mostly used in the <code>System.VFS.Export</code> artifact to
+facilitate snapshotting of the VFS view in the GUI.</p><h2 id=zip>zip</h2><p>Open a zip file as if it was a directory.</p><p>Filename is a pathspec with a delegate accessor opening the Zip file,
+and the Path representing the file within the zip file.</p><p>Example:</p><pre><code class=language-sql>SELECT OSPath, Mtime, Size
+FROM glob(
+    globs='/**/*.txt',
+    root=pathspec(DelegateAccessor='file',
+                  DelegatePath=&quot;File.zip&quot;,
+                  Path='/'),
+accessor='zip')
+</code></pre><footer class=footline></footer></div></div></section><div style=left:-1000px;overflow:scroll;position:absolute;top:-1000px;border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px><div style=border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px></div></div><script src=/js/clipboard.min.js?1712942523></script><script src=/js/perfect-scrollbar.min.js?1712942523></script><script src=/js/perfect-scrollbar.jquery.min.js?1712942523></script><script src=/js/jquery.sticky.js?1712942523></script><script src=/js/featherlight.min.js?1712942523></script><script src=/js/highlight.min.js?1712942523></script><script>hljs.highlightAll()</script><script src=/js/modernizr.custom-3.6.0.js?1712942523></script><script src=/js/learn.js?1712942523></script><script src=/js/hugo-learn.js?1712942523></script></body></html>
