@@ -1,5 +1,5 @@
 <!doctype html><html lang=en class="js csstransforms3d"><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=generator content="Hugo 0.122.0"><meta name=description content><link rel=icon href=/images/favicon.png type=image/png><title>Splunk.Flows.Upload :: Velociraptor - Digging deeper!</title>
-<link href=/css/nucleus.css?1713143098 rel=stylesheet><link href=/css/fontawesome-all.min.css?1713143098 rel=stylesheet><link href=/css/featherlight.min.css?1713143098 rel=stylesheet><link href=/css/perfect-scrollbar.min.css?1713143098 rel=stylesheet><link href=/css/auto-complete.css?1713143098 rel=stylesheet><link href=/css/theme.css?1713143098 rel=stylesheet><link href=/css/tabs.css?1713143098 rel=stylesheet><link href=/css/hugo-theme.css?1713143098 rel=stylesheet><link href=/css/theme-mine.css?1713143098 rel=stylesheet><link href=/css/dark.css?1713143098 rel=stylesheet><link href=/css/syntax.css?1713143098 rel=stylesheet><link href=/css/light.css?1713143098 rel=stylesheet><link href=/css/hljs.css?1713143098 rel=stylesheet><link href=https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css?1713143098 rel=stylesheet><script src=/js/jquery-3.3.1.min.js?1713143098></script><style>:root #header+#content>#left>#rlblock_left{display:none!important}</style><script async src="https://www.googletagmanager.com/gtag/js?id=G-QYH72LMYCS"></script><script>var doNotTrack=!1;if(!doNotTrack){window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-QYH72LMYCS",{anonymize_ip:!1})}</script><script>var doNotTrack=!1;doNotTrack||(window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","G-QYH72LMYCS","auto"),ga("send","pageview"))</script><script async src=https://www.google-analytics.com/analytics.js></script><script></script></head><body data-url=/artifact_references/pages/splunk.flows.upload/><nav id=sidebar><div id=header-wrapper><div id=header><script>function darkmode(){$("body").addClass("dark").removeClass("light"),document.cookie="theme=darkmode;path=/"}function lightmode(){$("body").removeClass("dark").addClass("light"),document.cookie="theme=lightmode;path=/"}const regex=new RegExp("theme=darkmode");regex.test(document.cookie)?darkmode():lightmode()</script><div class="btn btn-default ThemeSelector darkmode" onclick=darkmode()><i class="fas fa-moon"></i></div><div class="btn btn-default ThemeSelector lightmode" onclick=lightmode()><i class="fas fa-sun"></i></div><a href=https://docs.velociraptor.app/><img src=https://docs.velociraptor.app//images/logo.svg></a></div></div><div class=highlightable><ul class=topics><li data-nav-id=https://docs.velociraptor.app/announcements/ class="dd-item haschildren"><div><i class="fa fa-angle-right fa-sm category-icon"></i>
+<link href=/css/nucleus.css?1713145795 rel=stylesheet><link href=/css/fontawesome-all.min.css?1713145795 rel=stylesheet><link href=/css/featherlight.min.css?1713145795 rel=stylesheet><link href=/css/perfect-scrollbar.min.css?1713145795 rel=stylesheet><link href=/css/auto-complete.css?1713145795 rel=stylesheet><link href=/css/theme.css?1713145795 rel=stylesheet><link href=/css/tabs.css?1713145795 rel=stylesheet><link href=/css/hugo-theme.css?1713145795 rel=stylesheet><link href=/css/theme-mine.css?1713145795 rel=stylesheet><link href=/css/dark.css?1713145795 rel=stylesheet><link href=/css/syntax.css?1713145795 rel=stylesheet><link href=/css/light.css?1713145795 rel=stylesheet><link href=/css/hljs.css?1713145795 rel=stylesheet><link href=https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css?1713145795 rel=stylesheet><script src=/js/jquery-3.3.1.min.js?1713145795></script><style>:root #header+#content>#left>#rlblock_left{display:none!important}</style><script async src="https://www.googletagmanager.com/gtag/js?id=G-QYH72LMYCS"></script><script>var doNotTrack=!1;if(!doNotTrack){window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-QYH72LMYCS",{anonymize_ip:!1})}</script><script>var doNotTrack=!1;doNotTrack||(window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","G-QYH72LMYCS","auto"),ga("send","pageview"))</script><script async src=https://www.google-analytics.com/analytics.js></script><script></script></head><body data-url=/artifact_references/pages/splunk.flows.upload/><nav id=sidebar><div id=header-wrapper><div id=header><script>function darkmode(){$("body").addClass("dark").removeClass("light"),document.cookie="theme=darkmode;path=/"}function lightmode(){$("body").removeClass("dark").addClass("light"),document.cookie="theme=lightmode;path=/"}const regex=new RegExp("theme=darkmode");regex.test(document.cookie)?darkmode():lightmode()</script><div class="btn btn-default ThemeSelector darkmode" onclick=darkmode()><i class="fas fa-moon"></i></div><div class="btn btn-default ThemeSelector lightmode" onclick=lightmode()><i class="fas fa-sun"></i></div><a href=https://docs.velociraptor.app/><img src=https://docs.velociraptor.app//images/logo.svg></a></div></div><div class=highlightable><ul class=topics><li data-nav-id=https://docs.velociraptor.app/announcements/ class="dd-item haschildren"><div><i class="fa fa-angle-right fa-sm category-icon"></i>
 <a href=/announcements/><i class="fas fa-bullhorn"></i>Announcements</a></div><ul><li data-nav-id=https://docs.velociraptor.app/announcements/2023-cves/ class=dd-item><div><i class="fa fa-circleXX fa-sm category-icon"></i>
 <a href=/announcements/2023-cves/>Current CVEs</a></div></li></ul></li><li data-nav-id=https://docs.velociraptor.app/docs/ class="dd-item haschildren"><div><i class="fa fa-angle-right fa-sm category-icon"></i>
 <a href=/docs/><i class="fas fa-book-reader"></i>Documentation</a></div><ul><li data-nav-id=https://docs.velociraptor.app/docs/overview/ class="dd-item haschildren"><div><i class="fa fa-angle-right fa-sm category-icon"></i>
@@ -23,7 +23,8 @@
 <a href=/docs/gui/hunting/>Hunting</a></div></li></ul></li><li data-nav-id=https://docs.velociraptor.app/docs/vql/ class="dd-item haschildren"><div><i class="fa fa-angle-right fa-sm category-icon"></i>
 <a href=/docs/vql/>VQL Fundamentals</a></div><ul><li data-nav-id=https://docs.velociraptor.app/docs/vql/notebooks/ class=dd-item><div><i class="fa fa-circleXX fa-sm category-icon"></i>
 <a href=/docs/vql/notebooks/>Notebooks</a></div></li><li data-nav-id=https://docs.velociraptor.app/docs/vql/artifacts/ class=dd-item><div><i class="fa fa-circleXX fa-sm category-icon"></i>
-<a href=/docs/vql/artifacts/>Artifacts</a></div></li><li data-nav-id=https://docs.velociraptor.app/docs/vql/events/ class=dd-item><div><i class="fa fa-circleXX fa-sm category-icon"></i>
+<a href=/docs/vql/artifacts/>Artifacts</a></div></li><li data-nav-id=https://docs.velociraptor.app/docs/vql/join/ class=dd-item><div><i class="fa fa-circleXX fa-sm category-icon"></i>
+<a href=/docs/vql/join/>JOIN in VQL</a></div></li><li data-nav-id=https://docs.velociraptor.app/docs/vql/events/ class=dd-item><div><i class="fa fa-circleXX fa-sm category-icon"></i>
 <a href=/docs/vql/events/>Event Queries</a></div></li></ul></li><li data-nav-id=https://docs.velociraptor.app/docs/forensic/ class="dd-item haschildren"><div><i class="fa fa-angle-right fa-sm category-icon"></i>
 <a href=/docs/forensic/>Forensic Analysis</a></div><ul><li data-nav-id=https://docs.velociraptor.app/docs/forensic/filesystem/ class="dd-item haschildren"><div><i class="fa fa-angle-right fa-sm category-icon"></i>
 <a href=/docs/forensic/filesystem/>Searching Filenames</a></div><ul><li data-nav-id=https://docs.velociraptor.app/docs/forensic/filesystem/paths/ class=dd-item><div><i class="fa fa-circleXX fa-sm category-icon"></i>
@@ -85,7 +86,8 @@ TZ = GMT
 category = Custom
 pulldown_type = 1
 TRANSFORMS-vql-sourcetype = vql-sourcetype,vql-timestamp
-TRUNCATE = 512000</li><li>Add the following to transforms.conf<br>[vql-sourcetype]
+TRUNCATE = 512000</li><li>Add the following to transforms.conf
+[vql-sourcetype]
 INGEST_EVAL = sourcetype=lower(_index)
 [vql-timestamp]
 INGEST_EVAL = _time=case(<br>_index=&ldquo;artifact_Linux_Search_FileFinder&rdquo;,strptime(CTime,"%Y-%m-%dT%H:%M:%SZ"),<br>_index=&ldquo;artifact_System_VFS_ListDirectory&rdquo;,strptime(ctime,"%Y-%m-%dT%H:%M:%S.%NZ"),<br>_index=&ldquo;artifact_Windows_Timeline_MFT&rdquo;,strptime(event_time,"%Y-%m-%dT%H:%M:%S.%NZ"),<br>_index=&ldquo;artifact_Windows_NTFS_MFT&rdquo;,strptime(Created0x10,"%Y-%m-%dT%H:%M:%S.%NZ"),<br>_index=&ldquo;artifact_Windows_EventLogs_Evtx&rdquo;,strptime(TimeCreated,"%Y-%m-%dT%H:%M:%SZ"),<br>_index=&ldquo;artifact_Custom_Windows_EventLogs_System_7045&rdquo;,strptime(TimeCreated,"%Y-%m-%dT%H:%M:%SZ"),<br>_index=&ldquo;artifact_Windows_EventLogs_RDPAuth&rdquo;,strptime(EventTime,"%Y-%m-%dT%H:%M:%SZ"),<br>_index=&ldquo;artifact_Windows_Analysis_EvidenceOfExecution_UserAssist&rdquo;,strptime(LastExecution,"%Y-%m-%dT%H:%M:%SZ"),<br>_index=&ldquo;artifact_Windows_Analysis_EvidenceOfExecution_Amcache&rdquo;,strptime(KeyMTime,"%Y-%m-%dT%H:%M:%SZ"),<br>_index=&ldquo;artifact_Windows_System_Amcache_InventoryApplicationFile&rdquo;,strptime(LastModified,"%Y-%m-%dT%H:%M:%SZ"),<br>_index=&ldquo;artifact_Windows_Search_FileFinder&rdquo;,strptime(CTime,"%Y-%m-%dT%H:%M:%S.%NZ"),<br>_index=&ldquo;artifact_Windows_Applications_NirsoftBrowserViewer&rdquo;,strptime(Visited,"%Y-%m-%dT%H:%M:%SZ"),<br>_index=&ldquo;artifact_Windows_Registry_RecentDocs&rdquo;,strptime(LastWriteTime,"%Y-%m-%dT%H:%M:%SZ"),<br>_index=&ldquo;artifact_Windows_Forensics_UserAccessLogs_Clients&rdquo;,strptime(InsertDate,"%Y-%m-%dT%H:%M:%SZ"),<br>_index=&ldquo;artifact_Windows_Forensics_UserAccessLogs_DNS&rdquo;,strptime(LastSeen,"%Y-%m-%dT%H:%M:%SZ"),<br>_index=&ldquo;artifact_Windows_Forensics_UserAccessLogs_SystemIdentity&rdquo;,strptime(CreationTime,"%Y-%m-%dT%H:%M:%SZ"),<br>_index=&ldquo;artifact_Custom_Windows_Application_IIS_IISLogs&rdquo;,strptime(event_time,"%Y-%m-%dT%H:%M:%SZ"),<br>_index=&ldquo;artifact_MacOS_Applications_Chrome_History&rdquo;,strptime(last_visit_time,"%Y-%m-%dT%H:%M:%SZ"),<br>_index=&ldquo;artifact_Windows_Registry_UserAssist&rdquo;,strptime(LastExecution,"%Y-%m-%dT%H:%M:%SZ")<br>)</li></ul><blockquote><p>Note: <code>Enable SSL</code> only works if SSL is properly configured on your
@@ -112,7 +114,7 @@ description: |
        * Go to Settings &gt; Data Inputs &gt; HTTP Event Collector &gt; Global Settings
        * Ensure `All Tokens` is set to ENABLED
        * Copy the HTTP Port Number for this event
-    4. Configure your Splunk props.conf and tranforms.conf  
+    4. Configure your Splunk props.conf and tranforms.conf
        * Add the following to props.conf
         [vql]
         INDEXED_EXTRACTIONS = json
@@ -121,8 +123,8 @@ description: |
         category = Custom
         pulldown_type = 1
         TRANSFORMS-vql-sourcetype = vql-sourcetype,vql-timestamp
-        TRUNCATE = 512000  
-       * Add the following to transforms.conf  
+        TRUNCATE = 512000
+       * Add the following to transforms.conf
         [vql-sourcetype]
         INGEST_EVAL = sourcetype=lower(_index)
         [vql-timestamp]
@@ -146,7 +148,7 @@ description: |
                       _index="artifact_Custom_Windows_Application_IIS_IISLogs",strptime(event_time,"%Y-%m-%dT%H:%M:%SZ"), \
                       _index="artifact_MacOS_Applications_Chrome_History",strptime(last_visit_time,"%Y-%m-%dT%H:%M:%SZ"), \
                       _index="artifact_Windows_Registry_UserAssist",strptime(LastExecution,"%Y-%m-%dT%H:%M:%SZ") \
-                      )  
+                      )
 
 
        &gt; Note: `Enable SSL` only works if SSL is properly configured on your
@@ -197,6 +199,8 @@ sources:
                  WHERE Flow.artifacts_with_results =~ ArtifactNameRegex
                      AND log(message=Flow.artifacts_with_results)
 
+        LET organization &lt;= org().name
+
         LET documents = SELECT * FROM foreach(row=completions,
                   query={
                      SELECT * FROM foreach(
@@ -206,7 +210,8 @@ sources:
                                     timestamp(epoch=now()) AS timestamp,
                                     ClientId, Flow.session_id AS FlowId,
                                     "artifact_" + regex_replace(source=_value,
-                                       re='[/.]', replace='_') as _index
+                                       re='[/.]', replace='_') as _index,
+                                       organization as org_name
                              FROM source(
                                 client_id=ClientId,
                                 flow_id=Flow.session_id,
@@ -225,4 +230,4 @@ sources:
         timestamp_field=TimestampField
         )
 
-</code></pre><footer class=footline></footer></div></div></section><div style=left:-1000px;overflow:scroll;position:absolute;top:-1000px;border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px><div style=border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px></div></div><script src=/js/clipboard.min.js?1713143098></script><script src=/js/perfect-scrollbar.min.js?1713143098></script><script src=/js/perfect-scrollbar.jquery.min.js?1713143098></script><script src=/js/jquery.sticky.js?1713143098></script><script src=/js/featherlight.min.js?1713143098></script><script src=/js/highlight.min.js?1713143098></script><script>hljs.highlightAll()</script><script src=/js/modernizr.custom-3.6.0.js?1713143098></script><script src=/js/learn.js?1713143098></script><script src=/js/hugo-learn.js?1713143098></script></body></html>
+</code></pre><footer class=footline></footer></div></div></section><div style=left:-1000px;overflow:scroll;position:absolute;top:-1000px;border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px><div style=border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px></div></div><script src=/js/clipboard.min.js?1713145795></script><script src=/js/perfect-scrollbar.min.js?1713145795></script><script src=/js/perfect-scrollbar.jquery.min.js?1713145795></script><script src=/js/jquery.sticky.js?1713145795></script><script src=/js/featherlight.min.js?1713145795></script><script src=/js/highlight.min.js?1713145795></script><script>hljs.highlightAll()</script><script src=/js/modernizr.custom-3.6.0.js?1713145795></script><script src=/js/learn.js?1713145795></script><script src=/js/hugo-learn.js?1713145795></script></body></html>
