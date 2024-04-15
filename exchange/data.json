@@ -1,5 +1,15 @@
 [
     {
+        "title": "Windows.Apache.AccessLogs",
+        "author": "Krishna-23",
+        "description": "Parses Apache access logs to extract detailed request information.\n",
+        "link": "/exchange/artifacts/pages/windows.apache.accesslogs",
+        "tags": [],
+        "author_link": "https://github.com/Krishna-23",
+        "author_avatar": "https://avatars.githubusercontent.com/u/56428658?v=4",
+        "date": "2024-04-15"
+    },
+    {
         "title": "Exchange.Windows.EventLogs.Hayabusa.Takajo",
         "author": "x0rPE",
         "description": "[Takajo] (https://github.com/Yamato-Security/takajo) is a fast forensics analyzer\nfor Hayabusa results written in Nim. Takaj\u014d means \"Falconer\" in Japanese\nand was chosen as it analyzes Hayabusa's \"catches\" (results).",
