@@ -192,7 +192,7 @@
     {
         "title": "Windows.Forensics.PersistenceSniper",
         "author": "ablescia",
-        "description": "PersistenceSniper is a Powershell module that can be used by Blue Teams, Incident \nResponders and System Administrators to hunt persistences implanted in Windows machines. \nIt is also available on Powershell Gallery and it is digitally signed with a valid code \nsigning certificate. The tool is under active development with new releases coming out \nregularly, so make sure to use the up-to-date version. \nhttps://github.com/last-byte/PersistenceSniper",
+        "description": "PersistenceSniper is a Powershell module that can be used by Blue Teams, Incident\nResponders and System Administrators to hunt persistences implanted in Windows machines.\nIt is also available on Powershell Gallery and it is digitally signed with a valid code\nsigning certificate. The tool is under active development with new releases coming out\nregularly, so make sure to use the up-to-date version.\nhttps://github.com/last-byte/PersistenceSniper",
         "link": "/exchange/artifacts/pages/windows.forensics.persistencesniper",
         "tags": [],
         "author_link": "https://github.com/ablescia",
