@@ -941,7 +941,7 @@
     {
         "title": "Windows.Detection.ProxyHunter",
         "author": "mgreen27",
-        "description": "This artifact detects evidence of several common proxy tools.\n",
+        "description": "This artifact detects evidence of several common proxy tools.",
         "link": "/exchange/artifacts/pages/proxyhunter",
         "tags": [],
         "author_link": "https://github.com/mgreen27",
