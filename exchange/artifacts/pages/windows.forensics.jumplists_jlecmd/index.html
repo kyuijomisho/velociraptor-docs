@@ -1,5 +1,5 @@
 <!doctype html><html lang=en class="js csstransforms3d"><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=generator content="Hugo 0.122.0"><meta name=description content><link rel=icon href=/images/favicon.png type=image/png><title>Windows.Forensics.Jumplists_JLECmd :: Velociraptor - Digging deeper!</title>
-<link href=/css/nucleus.css?1716615273 rel=stylesheet><link href=/css/fontawesome-all.min.css?1716615273 rel=stylesheet><link href=/css/featherlight.min.css?1716615273 rel=stylesheet><link href=/css/perfect-scrollbar.min.css?1716615273 rel=stylesheet><link href=/css/auto-complete.css?1716615273 rel=stylesheet><link href=/css/theme.css?1716615273 rel=stylesheet><link href=/css/tabs.css?1716615273 rel=stylesheet><link href=/css/hugo-theme.css?1716615273 rel=stylesheet><link href=/css/theme-mine.css?1716615273 rel=stylesheet><link href=/css/dark.css?1716615273 rel=stylesheet><link href=/css/syntax.css?1716615273 rel=stylesheet><link href=/css/light.css?1716615273 rel=stylesheet><link href=/css/hljs.css?1716615273 rel=stylesheet><link href=https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css?1716615273 rel=stylesheet><script src=/js/jquery-3.3.1.min.js?1716615273></script><style>:root #header+#content>#left>#rlblock_left{display:none!important}</style><script async src="https://www.googletagmanager.com/gtag/js?id=G-QYH72LMYCS"></script><script>var doNotTrack=!1;if(!doNotTrack){window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-QYH72LMYCS",{anonymize_ip:!1})}</script><script>var doNotTrack=!1;doNotTrack||(window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","G-QYH72LMYCS","auto"),ga("send","pageview"))</script><script async src=https://www.google-analytics.com/analytics.js></script><script></script></head><body data-url=/exchange/artifacts/pages/windows.forensics.jumplists_jlecmd/><nav id=sidebar><div id=header-wrapper><div id=header><script>function darkmode(){$("body").addClass("dark").removeClass("light"),document.cookie="theme=darkmode;path=/"}function lightmode(){$("body").removeClass("dark").addClass("light"),document.cookie="theme=lightmode;path=/"}const regex=new RegExp("theme=darkmode");regex.test(document.cookie)?darkmode():lightmode()</script><div class="btn btn-default ThemeSelector darkmode" onclick=darkmode()><i class="fas fa-moon"></i></div><div class="btn btn-default ThemeSelector lightmode" onclick=lightmode()><i class="fas fa-sun"></i></div><a href=https://docs.velociraptor.app/><img src=https://docs.velociraptor.app//images/logo.svg></a></div></div><div class=highlightable><ul class=topics><li data-nav-id=https://docs.velociraptor.app/announcements/ class="dd-item haschildren"><div><i class="fa fa-angle-right fa-sm category-icon"></i>
+<link href=/css/nucleus.css?1716913697 rel=stylesheet><link href=/css/fontawesome-all.min.css?1716913697 rel=stylesheet><link href=/css/featherlight.min.css?1716913697 rel=stylesheet><link href=/css/perfect-scrollbar.min.css?1716913697 rel=stylesheet><link href=/css/auto-complete.css?1716913697 rel=stylesheet><link href=/css/theme.css?1716913697 rel=stylesheet><link href=/css/tabs.css?1716913697 rel=stylesheet><link href=/css/hugo-theme.css?1716913697 rel=stylesheet><link href=/css/theme-mine.css?1716913697 rel=stylesheet><link href=/css/dark.css?1716913697 rel=stylesheet><link href=/css/syntax.css?1716913697 rel=stylesheet><link href=/css/light.css?1716913697 rel=stylesheet><link href=/css/hljs.css?1716913697 rel=stylesheet><link href=https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css?1716913697 rel=stylesheet><script src=/js/jquery-3.3.1.min.js?1716913697></script><style>:root #header+#content>#left>#rlblock_left{display:none!important}</style><script async src="https://www.googletagmanager.com/gtag/js?id=G-QYH72LMYCS"></script><script>var doNotTrack=!1;if(!doNotTrack){window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-QYH72LMYCS",{anonymize_ip:!1})}</script><script>var doNotTrack=!1;doNotTrack||(window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","G-QYH72LMYCS","auto"),ga("send","pageview"))</script><script async src=https://www.google-analytics.com/analytics.js></script><script></script></head><body data-url=/exchange/artifacts/pages/windows.forensics.jumplists_jlecmd/><nav id=sidebar><div id=header-wrapper><div id=header><script>function darkmode(){$("body").addClass("dark").removeClass("light"),document.cookie="theme=darkmode;path=/"}function lightmode(){$("body").removeClass("dark").addClass("light"),document.cookie="theme=lightmode;path=/"}const regex=new RegExp("theme=darkmode");regex.test(document.cookie)?darkmode():lightmode()</script><div class="btn btn-default ThemeSelector darkmode" onclick=darkmode()><i class="fas fa-moon"></i></div><div class="btn btn-default ThemeSelector lightmode" onclick=lightmode()><i class="fas fa-sun"></i></div><a href=https://docs.velociraptor.app/><img src=https://docs.velociraptor.app//images/logo.svg></a></div></div><div class=highlightable><ul class=topics><li data-nav-id=https://docs.velociraptor.app/announcements/ class="dd-item haschildren"><div><i class="fa fa-angle-right fa-sm category-icon"></i>
 <a href=/announcements/><i class="fas fa-bullhorn"></i>Announcements</a></div><ul><li data-nav-id=https://docs.velociraptor.app/announcements/2023-cves/ class=dd-item><div><i class="fa fa-circleXX fa-sm category-icon"></i>
 <a href=/announcements/2023-cves/>Current CVEs</a></div></li></ul></li><li data-nav-id=https://docs.velociraptor.app/docs/ class="dd-item haschildren"><div><i class="fa fa-angle-right fa-sm category-icon"></i>
 <a href=/docs/><i class="fas fa-book-reader"></i>Documentation</a></div><ul><li data-nav-id=https://docs.velociraptor.app/docs/overview/ class="dd-item haschildren"><div><i class="fa fa-angle-right fa-sm category-icon"></i>
@@ -77,10 +77,10 @@
 <span class=links>Windows.Forensics.Jumplists_JLECmd</span></div><div class=progress><div class=wrapper><nav id=TableOfContents></nav></div></div></div></div><div id=head-tags></div><div id=body-inner><h1>Windows.Forensics.Jumplists_JLECmd</h1><ul><li>Execute Eric Zimmerman&rsquo;s JLECmd to parse AUTOMATICDESTINATIONS-MS and CUSTOMDESTINATIONS-MS files in C:\ drive recursively and return output for analysis. (jlecmd.exe -d C:/ &ndash;csvf -csv tmpdir results.csv).</li><li>JLECmd.zip is downloaded from the URL to &lsquo;C:\Program Files\Velociraptor\Tools&rsquo; folder.</li><li>JLECmd.zip can be uploaded to Velociraptor Server in order to copy it to the clients in case there is no internet connection.</li><li>Created using @carlos_cajigas LECmd VQL as a quide.</li><li>JLECmd is a CLI tool for analyzing Custom Destinations jump list data. Learn more - <a href=https://github.com/EricZimmerman/JLECmd>https://github.com/EricZimmerman/JLECmd</a></li></ul><pre><code class=language-yaml>
 name: Windows.Forensics.Jumplists_JLECmd
 description: |
-    * Execute Eric Zimmerman's JLECmd to parse AUTOMATICDESTINATIONS-MS and CUSTOMDESTINATIONS-MS files in C:\ drive recursively and return output for analysis. (jlecmd.exe -d C:/ --csvf -csv tmpdir results.csv).  
-    * JLECmd.zip is downloaded from the URL to 'C:\Program Files\Velociraptor\Tools' folder.   
+    * Execute Eric Zimmerman's JLECmd to parse AUTOMATICDESTINATIONS-MS and CUSTOMDESTINATIONS-MS files in C:\ drive recursively and return output for analysis. (jlecmd.exe -d C:/ --csvf -csv tmpdir results.csv).
+    * JLECmd.zip is downloaded from the URL to 'C:\Program Files\Velociraptor\Tools' folder.
     * JLECmd.zip can be uploaded to Velociraptor Server in order to copy it to the clients in case there is no internet connection.
-    * Created using @carlos_cajigas LECmd VQL as a quide.  
+    * Created using @carlos_cajigas LECmd VQL as a quide.
     * JLECmd is a CLI tool for analyzing Custom Destinations jump list data. Learn more - https://github.com/EricZimmerman/JLECmd
 
 author: Orhan Emre @orhan_emre
@@ -93,7 +93,7 @@ tools:
     expected_hash: 10bc3698867be7c707500afc01c45c44b6a0439d14e04477e08b76d95c87255c
     version: 1.5.0
 
-    
+
 parameters:
   - name: sourceFile
     default: .
@@ -122,53 +122,59 @@ sources:
 
       -- build tempfolder for output
       LET tmpdir &lt;= tempdir()
-      
+
       -- decompress utility
-      LET payload = SELECT * 
+      LET payload = SELECT *
         FROM unzip(filename=jlecmdpackage[0].FullPath,
             output_directory=tmpdir)
-      
+
       -- execute payload
-      LET deploy &lt;= SELECT * 
-        FROM execve(argv=[payload.NewPath[0], 
-        "-d", 
-        "c:/", 
-        "--csv", 
-        tmpdir + "jlecmd", 
-        "--csvf", 
+      LET deploy &lt;= SELECT *
+        FROM execve(argv=[payload.NewPath[0],
+        "-d",
+        "c:/",
+        "--csv",
+        tmpdir,
+        "--csvf",
         "results.csv"])
-      
-      -- parse csv
-      SELECT SourceFile, SourceCreated, SourceModified, LocalPath, Arguments, 
-      TargetCreated, TargetModified, VolumeLabel, DriveType, AppIdDescription, CommonPath,  
-      VolumeSerialNumber, MachineID, MachineMACAddress, TargetMFTEntryNumber, TargetSequenceNumber, 
-      TargetIDAbsolutePath, TrackerCreatedOn, ExtraBlocksPresent, HeaderFlags,FileAttributes, FileSize
-      FROM parse_csv(filename=tmpdir + "jlecmd" + "\\results_AutomaticDestinations.csv")
-         WHERE 
-        (if(condition=dateAfter, then=SourceCreated &gt; dateAfter,
-            else=TRUE) AND 
-        if(condition=dateBefore, then=SourceCreated &lt; dateBefore, 
-            else=TRUE))
-      AND SourceFile =~ sourceFile
-      AND LocalPath =~ localPath
-      AND Arguments =~ arguments
 
+      LET x = scope()
 
-  - query: |
-  
-      -- parse csv
-      SELECT SourceFile, SourceCreated, SourceModified, LocalPath, Arguments, 
-      TargetCreated, TargetModified, VolumeLabel, DriveType, AppIdDescription, CommonPath,  
-      VolumeSerialNumber, MachineID, MachineMACAddress, TargetMFTEntryNumber, TargetSequenceNumber, 
-      TargetIDAbsolutePath, TrackerCreatedOn, ExtraBlocksPresent, HeaderFlags,FileAttributes, FileSize
-      FROM parse_csv(filename=tmpdir + "jlecmd" + "\\results_CustomDestinations.csv")
-         WHERE 
-        (if(condition=dateAfter, then=SourceCreated &gt; dateAfter,
-            else=TRUE) AND 
-        if(condition=dateBefore, then=SourceCreated &lt; dateBefore, 
-            else=TRUE))
-      AND SourceFile =~ sourceFile
-      AND LocalPath =~ localPath
-      AND Arguments =~ arguments
+      SELECT * FROM foreach(row={
+          SELECT OSPath, upload(file=OSPath)
+          FROM glob(globs="results_*.csv", root=tmpdir)
+      }, query={
+          SELECT x.SourceFile AS SourceFile,
+             x.SourceCreated AS SourceCreated,
+             x.SourceModified AS SourceModified,
+             x.LocalPath AS LocalPath,
+             x.Arguments AS Arguments,
+             x.TargetCreated AS TargetCreated,
+             x.TargetModified AS TargetModified,
+             x.VolumeLabel AS VolumeLabel,
+             x.DriveType AS DriveType,
+             x.AppIdDescription AS AppIdDescription,
+             x.CommonPath AS CommonPath,
+             x.VolumeSerialNumber AS VolumeSerialNumber,
+             x.MachineID AS MachineID,
+             x.MachineMACAddress AS MachineMACAddress,
+             x.TargetMFTEntryNumber AS TargetMFTEntryNumber,
+             x.TargetSequenceNumber AS TargetSequenceNumber,
+             x.TargetIDAbsolutePath AS TargetIDAbsolutePath,
+             x.TrackerCreatedOn AS TrackerCreatedOn,
+             x.ExtraBlocksPresent AS ExtraBlocksPresent,
+             x.HeaderFlags AS HeaderFlags,
+             x.FileAttributes AS FileAttributes,
+             x.FileSize AS FileSize
+         FROM parse_csv(filename=OSPath)
+         WHERE
+           (if(condition=dateAfter, then=SourceCreated &gt; dateAfter,
+             else=TRUE) AND
+           if(condition=dateBefore, then=SourceCreated &lt; dateBefore,
+             else=TRUE))
+         AND SourceFile =~ sourceFile
+         AND LocalPath =~ localPath
+         AND Arguments =~ arguments
+      })
 
-</code></pre><footer class=footline></footer></div></div></section><div style=left:-1000px;overflow:scroll;position:absolute;top:-1000px;border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px><div style=border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px></div></div><script src=/js/clipboard.min.js?1716615273></script><script src=/js/perfect-scrollbar.min.js?1716615273></script><script src=/js/perfect-scrollbar.jquery.min.js?1716615273></script><script src=/js/jquery.sticky.js?1716615273></script><script src=/js/featherlight.min.js?1716615273></script><script src=/js/highlight.min.js?1716615273></script><script>hljs.highlightAll()</script><script src=/js/modernizr.custom-3.6.0.js?1716615273></script><script src=/js/learn.js?1716615273></script><script src=/js/hugo-learn.js?1716615273></script></body></html>
+</code></pre><footer class=footline></footer></div></div></section><div style=left:-1000px;overflow:scroll;position:absolute;top:-1000px;border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px><div style=border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px></div></div><script src=/js/clipboard.min.js?1716913697></script><script src=/js/perfect-scrollbar.min.js?1716913697></script><script src=/js/perfect-scrollbar.jquery.min.js?1716913697></script><script src=/js/jquery.sticky.js?1716913697></script><script src=/js/featherlight.min.js?1716913697></script><script src=/js/highlight.min.js?1716913697></script><script>hljs.highlightAll()</script><script src=/js/modernizr.custom-3.6.0.js?1716913697></script><script src=/js/learn.js?1716913697></script><script src=/js/hugo-learn.js?1716913697></script></body></html>

@@ -132,7 +132,7 @@
     {
         "title": "Windows.Forensics.Jumplists_JLECmd",
         "author": "orhan-emre",
-        "description": "* Execute Eric Zimmerman's JLECmd to parse AUTOMATICDESTINATIONS-MS and CUSTOMDESTINATIONS-MS files in C:\\ drive recursively and return output for analysis. (jlecmd.exe -d C:/ --csvf -csv tmpdir results.csv).  \n* JLECmd.zip is downloaded from the URL to 'C:\\Program Files\\Velociraptor\\Tools' folder.   \n* JLECmd.zip can be uploaded to Velociraptor Server in order to copy it to the clients in case there is no internet connection.\n* Created using @carlos_cajigas LECmd VQL as a quide.  \n* JLECmd is a CLI tool for analyzing Custom Destinations jump list data. Learn more - https://github.com/EricZimmerman/JLECmd\n",
+        "description": "* Execute Eric Zimmerman's JLECmd to parse AUTOMATICDESTINATIONS-MS and CUSTOMDESTINATIONS-MS files in C:\\ drive recursively and return output for analysis. (jlecmd.exe -d C:/ --csvf -csv tmpdir results.csv).\n* JLECmd.zip is downloaded from the URL to 'C:\\Program Files\\Velociraptor\\Tools' folder.\n* JLECmd.zip can be uploaded to Velociraptor Server in order to copy it to the clients in case there is no internet connection.\n* Created using @carlos_cajigas LECmd VQL as a quide.\n* JLECmd is a CLI tool for analyzing Custom Destinations jump list data. Learn more - https://github.com/EricZimmerman/JLECmd\n",
         "link": "/exchange/artifacts/pages/windows.forensics.jumplists_jlecmd",
         "tags": [],
         "author_link": "https://github.com/orhan-emre",
