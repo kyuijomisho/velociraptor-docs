@@ -1,5 +1,5 @@
 <!doctype html><html lang=en class="js csstransforms3d"><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=generator content="Hugo 0.122.0"><meta name=description content><link rel=icon href=/images/favicon.png type=image/png><title>Windows.Forensics.PersistenceSniper :: Velociraptor - Digging deeper!</title>
-<link href=/css/nucleus.css?1717767363 rel=stylesheet><link href=/css/fontawesome-all.min.css?1717767363 rel=stylesheet><link href=/css/featherlight.min.css?1717767363 rel=stylesheet><link href=/css/perfect-scrollbar.min.css?1717767363 rel=stylesheet><link href=/css/auto-complete.css?1717767363 rel=stylesheet><link href=/css/theme.css?1717767363 rel=stylesheet><link href=/css/tabs.css?1717767363 rel=stylesheet><link href=/css/hugo-theme.css?1717767363 rel=stylesheet><link href=/css/theme-mine.css?1717767363 rel=stylesheet><link href=/css/dark.css?1717767363 rel=stylesheet><link href=/css/syntax.css?1717767363 rel=stylesheet><link href=/css/light.css?1717767363 rel=stylesheet><link href=/css/hljs.css?1717767363 rel=stylesheet><link href=https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css?1717767363 rel=stylesheet><script src=/js/jquery-3.3.1.min.js?1717767363></script><style>:root #header+#content>#left>#rlblock_left{display:none!important}</style><script async src="https://www.googletagmanager.com/gtag/js?id=G-QYH72LMYCS"></script><script>var doNotTrack=!1;if(!doNotTrack){window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-QYH72LMYCS",{anonymize_ip:!1})}</script><script>var doNotTrack=!1;doNotTrack||(window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","G-QYH72LMYCS","auto"),ga("send","pageview"))</script><script async src=https://www.google-analytics.com/analytics.js></script><script></script></head><body data-url=/exchange/artifacts/pages/windows.forensics.persistencesniper/><nav id=sidebar><div id=header-wrapper><div id=header><script>function darkmode(){$("body").addClass("dark").removeClass("light"),document.cookie="theme=darkmode;path=/"}function lightmode(){$("body").removeClass("dark").addClass("light"),document.cookie="theme=lightmode;path=/"}const regex=new RegExp("theme=darkmode");regex.test(document.cookie)?darkmode():lightmode()</script><div class="btn btn-default ThemeSelector darkmode" onclick=darkmode()><i class="fas fa-moon"></i></div><div class="btn btn-default ThemeSelector lightmode" onclick=lightmode()><i class="fas fa-sun"></i></div><a href=https://docs.velociraptor.app/><img src=https://docs.velociraptor.app//images/logo.svg></a></div></div><div class=highlightable><ul class=topics><li data-nav-id=https://docs.velociraptor.app/announcements/ class="dd-item haschildren"><div><i class="fa fa-angle-right fa-sm category-icon"></i>
+<link href=/css/nucleus.css?1717769189 rel=stylesheet><link href=/css/fontawesome-all.min.css?1717769189 rel=stylesheet><link href=/css/featherlight.min.css?1717769189 rel=stylesheet><link href=/css/perfect-scrollbar.min.css?1717769189 rel=stylesheet><link href=/css/auto-complete.css?1717769189 rel=stylesheet><link href=/css/theme.css?1717769189 rel=stylesheet><link href=/css/tabs.css?1717769189 rel=stylesheet><link href=/css/hugo-theme.css?1717769189 rel=stylesheet><link href=/css/theme-mine.css?1717769189 rel=stylesheet><link href=/css/dark.css?1717769189 rel=stylesheet><link href=/css/syntax.css?1717769189 rel=stylesheet><link href=/css/light.css?1717769189 rel=stylesheet><link href=/css/hljs.css?1717769189 rel=stylesheet><link href=https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css?1717769189 rel=stylesheet><script src=/js/jquery-3.3.1.min.js?1717769189></script><style>:root #header+#content>#left>#rlblock_left{display:none!important}</style><script async src="https://www.googletagmanager.com/gtag/js?id=G-QYH72LMYCS"></script><script>var doNotTrack=!1;if(!doNotTrack){window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-QYH72LMYCS",{anonymize_ip:!1})}</script><script>var doNotTrack=!1;doNotTrack||(window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","G-QYH72LMYCS","auto"),ga("send","pageview"))</script><script async src=https://www.google-analytics.com/analytics.js></script><script></script></head><body data-url=/exchange/artifacts/pages/windows.forensics.persistencesniper/><nav id=sidebar><div id=header-wrapper><div id=header><script>function darkmode(){$("body").addClass("dark").removeClass("light"),document.cookie="theme=darkmode;path=/"}function lightmode(){$("body").removeClass("dark").addClass("light"),document.cookie="theme=lightmode;path=/"}const regex=new RegExp("theme=darkmode");regex.test(document.cookie)?darkmode():lightmode()</script><div class="btn btn-default ThemeSelector darkmode" onclick=darkmode()><i class="fas fa-moon"></i></div><div class="btn btn-default ThemeSelector lightmode" onclick=lightmode()><i class="fas fa-sun"></i></div><a href=https://docs.velociraptor.app/><img src=https://docs.velociraptor.app//images/logo.svg></a></div></div><div class=highlightable><ul class=topics><li data-nav-id=https://docs.velociraptor.app/announcements/ class="dd-item haschildren"><div><i class="fa fa-angle-right fa-sm category-icon"></i>
 <a href=/announcements/><i class="fas fa-bullhorn"></i>Announcements</a></div><ul><li data-nav-id=https://docs.velociraptor.app/announcements/2023-cves/ class=dd-item><div><i class="fa fa-circleXX fa-sm category-icon"></i>
 <a href=/announcements/2023-cves/>Current CVEs</a></div></li></ul></li><li data-nav-id=https://docs.velociraptor.app/docs/ class="dd-item haschildren"><div><i class="fa fa-angle-right fa-sm category-icon"></i>
 <a href=/docs/><i class="fas fa-book-reader"></i>Documentation</a></div><ul><li data-nav-id=https://docs.velociraptor.app/docs/overview/ class="dd-item haschildren"><div><i class="fa fa-angle-right fa-sm category-icon"></i>
@@ -81,7 +81,9 @@ signing certificate. The tool is under active development with new releases comi
 regularly, so make sure to use the up-to-date version.
 <a href=https://github.com/last-byte/PersistenceSniper>https://github.com/last-byte/PersistenceSniper</a></p><p>NOTE: the Rapid7 team has observed this artifact fail with some EDR/EPP tools deployed
 with Powershell prevention capabilities. Please ensure the Velociraptor binary (and
-child powershell) are excluded in these tools.</p><pre><code class=language-yaml>
+child powershell) are excluded in these tools.
+Now DiffCSVUrl is downloaded during generation of the
+collector, not during execution.</p><pre><code class=language-yaml>
 name: Windows.Forensics.PersistenceSniper
 description: |
   PersistenceSniper is a Powershell module that can be used by Blue Teams, Incident
@@ -94,13 +96,12 @@ description: |
   NOTE: the Rapid7 team has observed this artifact fail with some EDR/EPP tools deployed
   with Powershell prevention capabilities. Please ensure the Velociraptor binary (and
   child powershell) are excluded in these tools.
+  Now DiffCSVUrl is downloaded during generation of the 
+  collector, not during execution.
 
-author: Chris Jones - CPIRT | FabFaeb | Antonio Blescia (TheThMando)
+author: Chris Jones - CPIRT | FabFaeb | Antonio Blescia (TheThMando) | 0xdeadcell
 
 parameters:
-  - name: DiffCSVUrl
-    default: https://raw.githubusercontent.com/ablescia/Windows.PersistenceSniper/main/false_positives.csv
-    type: url
   - name: IncludeHighFalsePositivesChecks
     default: true
     type: bool
@@ -111,25 +112,25 @@ parameters:
 tools:
   - name: PSniper
     url: https://github.com/last-byte/PersistenceSniper/releases/download/v1.15.0/PersistenceSniper.zip
+  - name: DiffCSVUrl
+    url: https://raw.githubusercontent.com/ablescia/Windows.PersistenceSniper/main/false_positives.csv
+
 
 type: Client
 
 precondition: SELECT OS From info() where OS = 'windows'
 
 sources:
-    - query: |
+  - query: |
        LET TmpDir &lt;= tempdir(remove_last='Y')
 
        LET Toolzip &lt;= SELECT FullPath
          FROM Artifact.Generic.Utils.FetchBinary(ToolName="PSniper",
                                                  IsExecutable=FALSE)
-
-       LET _ &lt;= SELECT
-                       copy(
-                         accessor='data',
-                         dest=TmpDir + "\\false_positives.csv",
-                         filename=utf16(string=Content))
-         FROM http_client(method='GET', url=DiffCSVUrl)
+       
+       LET CSVPath &lt;= SELECT FullPath
+         FROM Artifact.Generic.Utils.FetchBinary(ToolName="DiffCSVUrl",
+                                                 IsExecutable=FALSE)
 
        LET _ &lt;= SELECT *
          FROM unzip(filename=Toolzip.FullPath, output_directory=TmpDir)
@@ -142,13 +143,13 @@ sources:
            components=[TmpDir, '\\false_positives.csv'],
            path_type='windows')
 
-           LET CSVFile &lt;= path_join(
+       LET CSVFile &lt;= path_join(
            components=[TmpDir + '\\psniper_results.csv'],
            path_type='windows')
        LET csvpath = '"' + CSVFile.Path + '"'
 
        LET arg_diffcsv &lt;= if(
-           condition=DiffCSVUrl != "",
+           condition=CSVFile != "",
            then="-DiffCSV " + '"' + FalsePositivesFile.Path + '"',
            else="")
 
@@ -179,4 +180,4 @@ sources:
          then=upload_hits,
          else=hits)
 
-</code></pre><footer class=footline></footer></div></div></section><div style=left:-1000px;overflow:scroll;position:absolute;top:-1000px;border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px><div style=border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px></div></div><script src=/js/clipboard.min.js?1717767363></script><script src=/js/perfect-scrollbar.min.js?1717767363></script><script src=/js/perfect-scrollbar.jquery.min.js?1717767363></script><script src=/js/jquery.sticky.js?1717767363></script><script src=/js/featherlight.min.js?1717767363></script><script src=/js/highlight.min.js?1717767363></script><script>hljs.highlightAll()</script><script src=/js/modernizr.custom-3.6.0.js?1717767363></script><script src=/js/learn.js?1717767363></script><script src=/js/hugo-learn.js?1717767363></script></body></html>
+</code></pre><footer class=footline></footer></div></div></section><div style=left:-1000px;overflow:scroll;position:absolute;top:-1000px;border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px><div style=border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px></div></div><script src=/js/clipboard.min.js?1717769189></script><script src=/js/perfect-scrollbar.min.js?1717769189></script><script src=/js/perfect-scrollbar.jquery.min.js?1717769189></script><script src=/js/jquery.sticky.js?1717769189></script><script src=/js/featherlight.min.js?1717769189></script><script src=/js/highlight.min.js?1717769189></script><script>hljs.highlightAll()</script><script src=/js/modernizr.custom-3.6.0.js?1717769189></script><script src=/js/learn.js?1717769189></script><script src=/js/hugo-learn.js?1717769189></script></body></html>
