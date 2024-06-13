@@ -1,183 +1,125 @@
----
-title: "Artifacts"
-date: 2021-06-12T05:20:45Z
-draft: false
-weight: 30
----
+Artifact Configuration
+Artifact Name: Real-Time Incident Detection and Response (RTIDR)
+Description: Automates the detection, analysis, and response to potential security incidents using VQL.
+Inputs:
+event_timestamp: Timestamp of the log event.
+source_ip: Source IP address of the event.
+destination_ip: Destination IP address of the event.
+event_type: Type of event (e.g., 'unauthorized_access', 'data_exfiltration', 'malware_detection', 'login').
+event_details: Details of the event.
+Outputs:
+Detected potential incidents.
+Real-time alerts for significant incidents.
+Automated incident reports.
+Alerts: Configurable thresholds for different types of incidents (e.g., unauthorized access, data exfiltration).
+Benefits of RTIDR Artifact
+Efficiency Gains:
 
-Velociraptor allows packaging VQL queries inside mini-programs called
-`Artifacts`. An artifact is simply a structured YAML file containing a
-query, with a name attached to it. This allows Velociraptor users to
-search for the query by name or description and simply run the query
-on the endpoint without necessarily needing to understand or type the
-query into the UI.
+Automated Processes: Significantly reduces the time spent on manual data collection, aggregation, and analysis.
+Real-Time Monitoring: Continuous monitoring allows for immediate detection of potential incidents.
+Improved Accuracy:
 
-Therefore Artifacts can be thought of as VQL modules.
+Dynamic Thresholds: Context-aware detection rules reduce false positives and enhance the accuracy of incident detection.
+Comprehensive Analysis: Aggregates data from multiple sources for a holistic view of security events.
+Faster Incident Response:
 
-Usually an artifact is geared towards collecting a single type of
-information from the endpoint. For example consider the following
-artifact:
+Real-Time Alerts: Immediate notification of potential incidents enables faster response and mitigation.
+Automated Reporting: Generates incident reports automatically, providing timely insights for decision-making.
+Better Resource Allocation:
 
-```yaml
-name: Custom.Artifact.Name
-description: |
-   This is the human readable description of the artifact.
+Focused Investigation: Analysts can focus on high-priority incidents identified by the system, rather than sifting through all logs manually.
+Strategic Response: Enables more strategic allocation of resources based on the severity and type of incidents detected.
+Summary
+The Real-Time Incident Detection and Response (RTIDR) artifact enhances the DFIR process by automating key tasks, improving accuracy, and enabling faster response times. This integration ensures a more efficient workflow, better detection of potential security incidents, and timely incident response, ultimately strengthening the organization's security posture.
 
-type: CLIENT
+-- VQL to collect and aggregate logs
+SELECT
+    event_timestamp,
+    source_ip,
+    destination_ip,
+    event_type,
+    event_details
+FROM
+    system_logs
+WHERE
+    event_timestamp > CURRENT_TIMESTAMP - INTERVAL '1 day'
+ORDER BY
+    event_timestamp DESC;
+-- VQL to detect potential incidents
+WITH recent_logs AS (
+    SELECT
+        event_timestamp,
+        source_ip,
+        destination_ip,
+        event_type,
+        event_details
+    FROM
+        system_logs
+    WHERE
+        event_timestamp > CURRENT_TIMESTAMP - INTERVAL '1 day'
+),
+anomalies AS (
+    SELECT
+        event_timestamp,
+        source_ip,
+        destination_ip,
+        event_type,
+        event_details
+    FROM
+        recent_logs
+    WHERE
+        event_type IN ('unauthorized_access', 'data_exfiltration', 'malware_detection')
+        OR (event_type = 'login' AND source_ip NOT IN (SELECT DISTINCT source_ip FROM recent_logs WHERE event_type = 'login' AND event_timestamp > CURRENT_TIMESTAMP - INTERVAL '7 days'))
+)
+SELECT
+    event_timestamp,
+    source_ip,
+    destination_ip,
+    event_type,
+    event_details,
+    'Potential Incident' AS incident_status
+FROM
+    anomalies
+ORDER BY
+    event_timestamp DESC;
+    -- VQL to generate alerts for potential incidents
+WITH incidents AS (
+    SELECT
+        event_timestamp,
+        source_ip,
+        destination_ip,
+        event_type,
+        event_details
+    FROM
+        system_logs
+    WHERE
+        event_type IN ('unauthorized_access', 'data_exfiltration', 'malware_detection')
+        OR (event_type = 'login' AND source_ip NOT IN (SELECT DISTINCT source_ip FROM system_logs WHERE event_type = 'login' AND event_timestamp > CURRENT_TIMESTAMP - INTERVAL '7 days'))
+)
+SELECT
+    'ALERT' AS alert_type,
+    event_timestamp,
+    source_ip,
+    destination_ip,
+    event_type,
+    event_details
+FROM
+    incidents
+WHERE
+    event_timestamp > CURRENT_TIMESTAMP - INTERVAL '1 hour';
+-- VQL to generate incident reports
+SELECT
+    DATE_TRUNC('day', event_timestamp) AS report_date,
+    COUNT(*) AS total_incidents,
+    SUM(CASE WHEN event_type = 'unauthorized_access' THEN 1 ELSE 0 END) AS unauthorized_access_count,
+    SUM(CASE WHEN event_type = 'data_exfiltration' THEN 1 ELSE 0 END) AS data_exfiltration_count,
+    SUM(CASE WHEN event_type = 'malware_detection' THEN 1 ELSE 0 END) AS malware_detection_count
+FROM
+    system_logs
+WHERE
+    event_timestamp > CURRENT_TIMESTAMP - INTERVAL '7 days'
+GROUP BY
+    report_date
+ORDER BY
+    report_date DESC;
 
-parameters:
-   - name: FirstParameter
-     default: Default Value of first parameter
-
-precondition: ""
-
-sources:
-  - name: MySource
-    precondition:
-      SELECT OS From info() where OS = 'windows' OR OS = 'linux' OR OS = 'darwin'
-
-    query: |
-      SELECT * FROM info()
-      LIMIT 10
-```
-
-The Artifact contains a number of important parameters:
-
-1. **Name**: The artifact contains a name. By convention the name is
-   segmented by dots in a hierarchy. The Name appears in the GUI and
-   can be searched on.
-2. **Description**: Artifacts contain a human readable description. The
-   description field is also searchable in the GUI and so should
-   contain relevant keywords that make the artifact more discoverable.
-3. **Type**: The type of the Artifact. Since Velociraptor uses VQL in many
-   different contexts, the type of the artifact hints to the GUI where
-   the artifact is meant to run. For example, a CLIENT artifact is
-   meant to be run on the endpoint, while a SERVER artifact is meant
-   to be run on the server. The artifact type is only relevant for the
-   GUI.
-4. **Parameters**: An artifact may declare parameters, in which case they
-   may be set by the GUI user to customize the artifact collection.
-5. **Sources**: The artifact may define a number of VQL sources to
-   generate result tables. Each source generates a single table. If
-   more than one source is given, they must all have unique names.
-6. **Precondition**: A source may define a precondition query. This query
-   will be run prior to collecting the source. If it returns no rows
-   then the collection will be skipped. Preconditions make it safe to
-   collect artifacts from all hosts (e.g. in a hunt), and ensure that
-   only artifacts that make sense to collect are actually run.
-7. **Query**: The query that will be used to collect that source. Note
-   that since each source **must** produce a single table, the query
-   should have exactly one `SELECT` clause and it must be at the end
-   of the query potentially following any `LET` queries.
-
-## Parameters
-
-Artifact parameters allow the user to customize the collection in a
-controlled way - without needing to edit the VQL. The GUI will present
-a form that allows the user to update the parameters prior to each
-collection.
-
-Parameters may define a type. This type will be used to hint to the
-GUI how to render the form element. The type also determines how the
-parameter is sent to the client and ensures the parameter appears as
-that type in the query.
-
-Prior to launching the query on the endpoint, Velociraptor will
-populate the scope with the parameters. This allows the VQL query to
-directly access the parameters.
-
-Artifact parameters are sent to the client as strings The client
-automatically parses them into a VQL type depending on the parameter's
-type specification.  The GUI uses type specification to render an
-appropriate UI
-
-### Parameter types
-
-Currently the following parameter types are supported
-
-* **int, integer**: The parameter is an integer
-* **timestamp**: The parameter is a timestamp
-* **csv**: Parameter appears as a list of dicts formatted as a CSV
-* **json**: Parameter is a JSON encoded dict
-* **json_array**: The parameter is a list of dicts encoded as a JSON blob (similar to csv)
-* **bool**: The parameter is a boolean (TRUE/YES/Y/OK)
-
-### Example
-
-Let's take a look at a typical artifact `Windows.Detection.Mutants`.
-
-![Mutants artifact](mutants.png)
-
-This artifact uncovers the mutants (named mutexes) on a system, using
-two methods. First we enumerate all handles, and check which process
-is holding a handle to a mutant object. Alternatively we enumerate the
-kernel object manager to receive the same information.
-
-Therefore this artifact contains two sources - each gets similar
-information in a different way. A user who is just interested in
-listing the Mutants on an endpoint would probably need to see both
-results.
-
-We also see some parameters declared to allow a user to filter by
-process name or mutant name.
-
-## Preconditions and source queries
-
-A precondition is a query that is run before collecting the artifact
-to determine if the artifact should be collected at all. The
-precondition makes it safe to collect artifacts without needing to
-worry about if the artifact is designed for this particular
-architecture or operating system. For example, performing a hunt for a
-Windows only artifact is safe to target all clients because Linux
-clients will just ignore it and return no rows. Most preconditions
-target specific operating systems or architectures but the precondition
-can be an arbitrary query.
-
-You can specify a precondition at the top level of the artifact or at
-each source:
-
-* For a top level precondition, after testing for the precondition,
-  the queries from each source are run in series within the same query
-  scope. This means you can define a VQL variable in an earlier source
-  and use it in another source.
-* If the precondition is specified at the source level, the VQL engine
-  has no idea if any particular source will be use or not. Therefore
-  the engine treats each source as an independent query within its own
-  scope. Since sources are independent they will run in parallel and
-  any VQL variable defined in one source will not be visible to other
-  sources.
-
-## Artifact writing tips
-
-Typically we have a new idea for a new detection. The first step is to
-develop the VQL that will detect the anomaly by writing the VQL in a
-notebook cell on the target operating system itself (usually we use
-`velociraptor gui` to start a new local server).
-
-While developing the VQL, Use the `log()` VQL function librally to
-provide print debugging.
-
-Use format(format="%T %v", args=[X, X]) to learn about a value's type
-and value.
-
-## Calling artifacts from VQL
-
-You can call other artifacts from your own VQL using the
-`Artifact.<artifact name>` plugin notation. Args to the `Artifact()`
-plugin are passed as artifact parameters.
-
-![Calling artifacts](calling_artifacts.png)
-
-When calling artifacts types are not converted. Make sure you pass the
-expected types
-
-{{% notice info "Compiling artifacts into VQL requests" %}}
-
-When collecting an artifact from the client, the server **compiles**
-the artifact and it's dependencies into raw VQL statements and sends
-these to the client for evaluation. We never rely on the artifact
-definitions embedded in the client itself - instead we always send the
-compiled VQL to the client. This allows us to upgrade artifact
-definitions on the server without needing to update the client itself.
-
-{{% /notice %}}
